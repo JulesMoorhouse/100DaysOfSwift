@@ -41,21 +41,30 @@ class ViewController: UIViewController {
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
         
-        title = countries[correctAnswer].uppercased()
+        let country = countries[correctAnswer].uppercased()
+        title = "Guess \(country) ? : Score (\(score) of 10)"
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         var title: String
-        
+        var message: String = ""
         if sender.tag == correctAnswer {
             title = "Correct"
             score += 1
         } else {
             title = "Wrong"
+            message += "Wrong! Thats the flag of \(countries[sender.tag])\n\n";
             score -= 1
         }
         
-        let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
+        if (score >= 10) {
+            message += "Your final score was \(score)"
+        }
+        else {
+            message += "Your score is \(score)"
+        }
+        
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
         
