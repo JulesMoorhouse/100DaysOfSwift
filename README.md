@@ -30,3 +30,5 @@ Day 29 - P05C WordScrable
 
 Day 30 - P06A GuessTheFlag
 
+Day 31 - P06B Autolayout, P06C AutoLayoutAnchors
+
