@@ -56,8 +56,16 @@ class ViewController: UIViewController {
             view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[\(label)]|", options: [], metrics: nil, views: viewsDictionary))
 
         }
-        // Verital layout. - means space. Notice no ending |
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label1]-[label2]-[label3]-[label4]-[label5]", options: [], metrics: nil, views: viewsDictionary))
+        
+        let metrics = ["labelHeight": 88]
+        
+        // Verital layout
+        // - means space
+        // (==88) means a set size of 88
+        // | edge
+        // (>= 10) at least 10
+        // @999 - priority
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[label1(labelHeight@999)]-[label2(label1)]-[label3(label1)]-[label4(label1)]-[label5(label1)]-(>=10)-|", options: [], metrics: metrics, views: viewsDictionary))
     }
 
 
