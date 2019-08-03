@@ -7,28 +7,62 @@ PnnA - Project A
 
 Cnn - Full challenge project
 
-Day 23 - C01 WorldFlagsViewer
-Milestone project challenge
 
-Day 16 / 17 - P01 StormViewer
 
-Day 18 - P01C StormViewer
+Day 16 / 17 
+- Folder: P01 StormViewer
+- Topics: view controllers, storyboards, FileManager class, UIImageView, UIImage, UINavigationBar and more.
 
-Day 19 / 20 - P02 GuessTheFlag
+Day 18
+- Folder: P01C StormViewer
+- Challenge changes from the StormViewer project.
 
-Day 21 - P02C GuessTheFlag
+Day 19 / 20 
+- Folder: P02 GuessTheFlag
+- Topics: Asset catalogs, buttons, colors, array shuffling, random number generation, @IBAction and UIAlertController.
 
-Day 22 - P03 StormViewerActivity
+Day 21 
+- Folder: P02C GuessTheFlag
+- Challenge changes from the GuessTheFlag project.
 
-Day 24 / 25 - P04 SimpleBrowser
+Day 22 
+- Folder: P03 StormViewerActivity
+- Topics: UIBarButtonItem and UIActivityViewController.
 
-Day 26 - P04C SimpleBrowser
+Day 23 
+- Folder: C01 WorldFlagsViewer
+- Milestone project challenge
 
-Day 27 / 28 - P05 WordScrable
+Day 24 / 25 
+- Folder: P04 SimpleBrowser
+- Topics: WKWebView, action sheets, UIProgressView, key-value observing and more.
 
-Day 29 - P05C WordScrable
+Day 26 
+- Folder: P04C SimpleBrowser
+- Challenge changes from the SimpleBrowser project.
 
-Day 30 - P06A GuessTheFlag
+Day 27 / 28 
+- Folder: P05 WordScrable
+- Topics: capture lists and reading files.
 
-Day 31 - P06B Autolayout, P06C AutoLayoutAnchors
+Day 29 
+- Folder: P05C WordScrable
+- Challenge changes from the WordScrable project.
 
+Day 30 
+- Folder: P06A GuessTheFlag
+- Topics: aspect ratio constraints, Visual Format language and more.
+
+Day 31 
+- Folder: P06B Autolayout, P06C AutoLayoutAnchors
+- Topics: advanced Visual Formatting Language and Auto Layout anchors.
+- Challenge changes from the Autolayout project.
+
+Day 32
+- Folder: C02 - Shopping List 
+- challenge project
+- Milestone project challenge
+
+Day 33 
+- Topics: UITabBarController, Data, Codable
+- Topics:
