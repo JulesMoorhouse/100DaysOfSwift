@@ -62,7 +62,9 @@
 - challenge project
 - Milestone project challenge
 
-**Day 33**
+**Day 33 / 34 / 35**
 - Folder: P07 WhiteHousePetitions P07C WhiteHousePetitions
 - Topics: UITabBarController, Data, Codable, UITabBarController and UIStoryboard.
 
+**Day 36**
+- Topics:  Text alignment, layout margins, UIFont, and more.
