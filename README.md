@@ -67,4 +67,4 @@
 - Topics: UITabBarController, Data, Codable, UITabBarController and UIStoryboard.
 
 **Day 36**
-- Topics:  Text alignment, layout margins, UIFont, and more.
+- Topics:  Text alignment, layout margins, UIFont, addTarget, enumerated, joined, replacingOccurences and more.
