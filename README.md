@@ -66,5 +66,7 @@
 - Folder: P07 WhiteHousePetitions P07C WhiteHousePetitions
 - Topics: UITabBarController, Data, Codable, UITabBarController and UIStoryboard.
 
-**Day 36**
+**Day 36 / 37 / 38**
+- Folder: P08 SwiftyWords, P08C SwiftyWords
 - Topics:  Text alignment, layout margins, UIFont, addTarget, enumerated, joined, replacingOccurences and more.
+- Challenge changes also.
