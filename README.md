@@ -3,7 +3,6 @@
 **Project Prefixes**
 - Pnn - Project
 - PnnX - Project with challenge changes
-- pnnU - Project which was updated in a later day
 - PnnA - Project A
 - Xnn - Full challenge project
 
@@ -72,7 +71,12 @@
 - Challenge changes also.
 
 **Day 39**
-- Folder: P09 WhiteHousePetitions - DispatchQueue.global - async, DispatchQueue.main.async
+- Folder: P09A WhiteHousePetitions - DispatchQueue.global - async, DispatchQueue.main.async
 - Folder: P09B WhiteHousePetitions - PerformSelector
 - Topics: Grand Central Dispatch, quality of service queues, performSelector() and more.
 - An important video on GCD https://www.hackingwithswift.com/read/9/3/gcd-101-async
+
+**Day 40**
+- Folder: P09X StormViewer, P09X SwiftyWords, P09X WhiteHousePetitions
+- Challenge GCD changes to several projects.
+
