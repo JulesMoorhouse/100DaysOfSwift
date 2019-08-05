@@ -2,10 +2,10 @@
 
 **Project Prefixes**
 - Pnn - Project
-- PnnC - Project with challenge changes
+- PnnX - Project with challenge changes
 - pnnU - Project which was updated in a later day
 - PnnA - Project A
-- Cnn - Full challenge project
+- Xnn - Full challenge project
 
 
 **Day 16 / 17**
@@ -13,7 +13,7 @@
 - Topics: view controllers, storyboards, FileManager class, UIImageView, UIImage, UINavigationBar and more.
 
 **Day 18**
-- Folder: P01C StormViewer
+- Folder: P01X StormViewer
 - Challenge changes from the StormViewer project.
 
 **Day 19 / 20**
@@ -21,7 +21,7 @@
 - Topics: Asset catalogs, buttons, colors, array shuffling, random number generation, @IBAction and UIAlertController.
 
 **Day 21**
-- Folder: P02C GuessTheFlag
+- Folder: P02X GuessTheFlag
 - Challenge changes from the GuessTheFlag project.
 
 **Day 22** 
@@ -29,7 +29,7 @@
 - Topics: UIBarButtonItem and UIActivityViewController.
 
 **Day 23**
-- Folder: C01 WorldFlagsViewer
+- Folder: X01 WorldFlagsViewer
 - Milestone project challenge
 
 **Day 24 / 25**
@@ -37,7 +37,7 @@
 - Topics: WKWebView, action sheets, UIProgressView, key-value observing and more.
 
 **Day 26**
-- Folder: P04C SimpleBrowser
+- Folder: P04X SimpleBrowser
 - Challenge changes from the SimpleBrowser project.
 
 **Day 27 / 28**
@@ -45,7 +45,7 @@
 - Topics: capture lists and reading files.
 
 **Day 29**
-- Folder: P05C WordScrable
+- Folder: P05X WordScrable
 - Challenge changes from the WordScrable project.
 
 **Day 30**
@@ -53,17 +53,17 @@
 - Topics: aspect ratio constraints, Visual Format language and more.
 
 **Day 31**
-- Folder: P06B Autolayout, P06C AutoLayoutAnchors
+- Folder: P06B Autolayout, P06X AutoLayoutAnchors
 - Topics: advanced Visual Formatting Language and Auto Layout anchors.
 - Challenge changes from the Autolayout project.
 
 **Day 32**
-- Folder: C02 - Shopping List 
+- Folder: X02 - Shopping List 
 - challenge project
 - Milestone project challenge
 
 **Day 33 / 34 / 35**
-- Folder: P07 WhiteHousePetitions P07C WhiteHousePetitions
+- Folder: P07 WhiteHousePetitions P07X WhiteHousePetitions
 - Topics: UITabBarController, Data, Codable, UITabBarController and UIStoryboard.
 
 **Day 36 / 37 / 38**
