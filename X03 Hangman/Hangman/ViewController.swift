@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     var guessCharField: UITextField!
     var submitButton: UIButton!
     
-    var usedLetters = [Character]()
-    var word: String = ""
+    var usedLetters = [""]
+    var word = ""
     
     var score = 0 {
         didSet {
@@ -34,6 +34,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         setupUI()
+        
+        DispatchQueue.global(qos: .userInitiated).async {
+            [weak self] in
+            self?.loadWord()
+        }
     }
 
     func setupUI() {
@@ -55,7 +60,7 @@ class ViewController: UIViewController {
         guessedLabel = UILabel()
         guessedLabel.translatesAutoresizingMaskIntoConstraints = false
         guessedLabel.textAlignment = .center
-        guessedLabel.font = UIFont.systemFont(ofSize: 44)
+        guessedLabel.font = UIFont.systemFont(ofSize: 34)
         guessedLabel.text = "?"
         view.addSubview(guessedLabel)
         
@@ -64,7 +69,7 @@ class ViewController: UIViewController {
         guessCharField.placeholder = "Guess a letter"
         guessCharField.textAlignment = .center
         guessCharField.font = UIFont.systemFont(ofSize: 34)
-        guessCharField.isUserInteractionEnabled = false
+        guessCharField.backgroundColor = .lightGray
         view.addSubview(guessCharField)
         
         submitButton = UIButton(type: .system)
@@ -92,16 +97,100 @@ class ViewController: UIViewController {
             submitButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             submitButton.heightAnchor.constraint(equalToConstant: 44),
         ])
-        
-        scoreLabel.backgroundColor = .cyan
-        remainingLivesLabel.backgroundColor = .yellow
-        guessedLabel.backgroundColor = .purple
-
     }
 
     @objc func submitTapped(_ sender: UIButton) {
-        guard let guessText = guessCharField.text else { return }
+        guard let guessText = guessCharField?.text?.lowercased() else { return }
         
+        guessCharField?.text = ""
+        
+        if guessText.count != 1 {
+            let ac = UIAlertController(title: "Warning", message: "Sorry just enter 1 letter, try again!", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+            return
+        }
+        
+        if usedLetters.contains(guessText) {
+            return
+        }
+        
+        usedLetters.append(guessText)
+        
+        //let guessLetter = guessText[0]
+        var promptWord = ""
+
+        for letter in word {
+            let strLetter = String(letter) // string of single character
+
+            // Used letters must be letters the user has previously entered
+            // so this will be blank to start with and add these letters as
+            // more are correctly guessed.
+            // However here it's doing a check and showing it in the guess label.
+            // e.g. if the letter is H it will me ??H???
+            if usedLetters.contains(strLetter) {
+                promptWord += strLetter
+            } else {
+                promptWord += "?"
+            }
+            
+//            var wordLetter word.index[i, offsetBy: 0]
+//            if guessLetter == wordLetter {
+//
+//            }
+        }
+        guessedLabel.text = promptWord
+        
+        if !word.contains(guessText) {
+            remainingLives -= 1
+        }
+        
+        var message = ""
+        if !promptWord.contains("?") {
+            message = "Congratulations you guessed the word correctly!\n\n Try another word"
+        }
+        
+        if remainingLives == 0 {
+            message = "Sorry you lost all your lives!\n\n Try another word!"
+        }
+        
+        if message != "" {
+            let ac = UIAlertController(title: "Result", message: message, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+            
+            DispatchQueue.global(qos: .userInitiated).async {
+                [weak self] in
+                self?.loadWord()
+            }
+        }
+    }
+    
+    func loadWord() {
+        if let levelFileURL = Bundle.main.url(forResource: "words", withExtension: "txt") {
+            if let levelContents = try? String(contentsOf: levelFileURL) {
+                var lines = levelContents.components(separatedBy: "\n")
+                lines.shuffle()
+                word = lines[0]
+            }
+        }
+        
+        DispatchQueue.main.async {
+            [weak self] in
+         
+            self?.score = 0
+            self?.usedLetters.removeAll(keepingCapacity: true)
+            self?.guessCharField.text = ""
+            self?.guessedLabel.text = ""
+            
+            guard let word = self?.word else { return }
+            
+             self?.remainingLives = word.count
+            
+            for _ in 0..<word.count {
+                self?.guessedLabel.text?.append("?")
+            }
+        }
     }
 }
 
