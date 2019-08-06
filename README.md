@@ -81,4 +81,8 @@
 - Challenge GCD changes to several projects.
 
 **Day 41**
+- Folder: X03 Hangman
 - Milestone project challenge
+
+***Day 42**
+- Topics: UICollectionView and UICollectionViewCell, UIImagePickerController, UUID, NSObject subclasses, and fatalError
