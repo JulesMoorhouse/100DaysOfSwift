@@ -93,7 +93,7 @@
 - Topics: SpiteKit, SKSpriteNode and SKPhysicsBody
 
 **Day 48**
-- Folder: P12 UserDefaults, P12A NamesToFaces NSCoding
+- Folder: P12 UserDefaults, P12A NamesToFaces NSCoding, P12B NamesToFaces Codable
 - Topics: UserDefaults, NSCoding, NSKeyedArchiver, NSKeyedUnarchiver, JSONEncoder and JSONDecoder
 
 
