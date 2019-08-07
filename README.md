@@ -91,3 +91,9 @@
 **Day 45 / 46 / 47**
 - Folder: P11 Pachinko, P11X Pachinko
 - Topics: SpiteKit, SKSpriteNode and SKPhysicsBody
+
+**Day 48**
+- Folder: P12 UserDefaults, P12A NamesToFaces NSCoding
+- Topics: UserDefaults, NSCoding, NSKeyedArchiver, NSKeyedUnarchiver, JSONEncoder and JSONDecoder
+
+
