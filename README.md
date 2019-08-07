@@ -84,5 +84,10 @@
 - Folder: X03 Hangman
 - Milestone project challenge
 
-***Day 42**
+**Day 42 / 43 / 44**
+- Folder: P10 NamesToFaces, P10X NamesTofaces
 - Topics: UICollectionView and UICollectionViewCell, UIImagePickerController, UUID, NSObject subclasses, and fatalError
+
+**Day 45**
+- Folder: P11 Pachinko
+- Topics: SpiteKit, SKSpriteNode and SKPhysicsBody
