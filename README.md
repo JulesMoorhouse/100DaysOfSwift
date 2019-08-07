@@ -94,6 +94,6 @@
 
 **Day 48**
 - Folder: P12 UserDefaults, P12A NamesToFaces NSCoding, P12B NamesToFaces Codable
-- Topics: UserDefaults, NSCoding, NSKeyedArchiver, NSKeyedUnarchiver, JSONEncoder and JSONDecoder
+- Topics: UserDefaults, NSCoding (Objective C compatible), Codable (Not Objective C compatible), NSKeyedArchiver, NSKeyedUnarchiver, JSONEncoder and JSONDecoder
 
 
