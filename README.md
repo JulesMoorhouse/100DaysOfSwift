@@ -88,6 +88,6 @@
 - Folder: P10 NamesToFaces, P10X NamesTofaces
 - Topics: UICollectionView and UICollectionViewCell, UIImagePickerController, UUID, NSObject subclasses, and fatalError
 
-**Day 45**
-- Folder: P11 Pachinko
+**Day 45 / 46 / 47**
+- Folder: P11 Pachinko, P11X Pachinko
 - Topics: SpiteKit, SKSpriteNode and SKPhysicsBody
