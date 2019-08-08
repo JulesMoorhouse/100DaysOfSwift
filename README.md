@@ -92,8 +92,10 @@
 - Folder: P11 Pachinko, P11X Pachinko
 - Topics: SpiteKit, SKSpriteNode and SKPhysicsBody
 
-**Day 48**
+**Day 48 / 49**
 - Folder: P12 UserDefaults, P12A NamesToFaces NSCoding, P12B NamesToFaces Codable
 - Topics: UserDefaults, NSCoding (Objective C compatible), Codable (Not Objective C compatible), NSKeyedArchiver, NSKeyedUnarchiver, JSONEncoder and JSONDecoder
 
-
+**Day 50**
+- Folder: X04 CameraCaptions
+- Milestone project challenge
