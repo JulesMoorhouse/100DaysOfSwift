@@ -99,3 +99,12 @@
 **Day 50**
 - Folder: X04 CameraCaptions
 - Milestone project challenge
+
+**Day 51**
+- Watching a couple of conference videos
+- https://www.youtube.com/watch?v=OgU8d_E1K14
+- https://vimeo.com/291590798
+
+**Day 52**
+- Topics - UISlider while also getting some practice with UIImagePickerController.
+- Folder: P13 InstaFilter
