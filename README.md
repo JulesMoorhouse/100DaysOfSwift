@@ -105,6 +105,9 @@
 - https://www.youtube.com/watch?v=OgU8d_E1K14
 - https://vimeo.com/291590798
 
-**Day 52**
+**Day 52 / 53 / 54**
 - Topics - UISlider while also getting some practice with UIImagePickerController and saving to iOS Photos.
-- Folder: P13 InstaFilter
+- Folder: P13 InstaFilter, P13X InstaFilter
+
+**Day 55**
+- Topics - SKCropNode, SKTexture, and more.
