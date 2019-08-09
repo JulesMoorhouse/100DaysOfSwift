@@ -15,6 +15,8 @@
 		889DDBAE22FD6A3800560581 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 889DDBAD22FD6A3800560581 /* Assets.xcassets */; };
 		889DDBB122FD6A3800560581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889DDBAF22FD6A3800560581 /* LaunchScreen.storyboard */; };
 		88E14A6122FD768500B9C039 /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E14A6022FD768500B9C039 /* WhackSlot.swift */; };
+		88E14A6222FD8AC200B9C039 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 889DDBB822FD6BC700560581 /* whack.caf */; };
+		88E14A6322FD8AC400B9C039 /* whackBad.caf in Resources */ = {isa = PBXBuildFile; fileRef = 889DDBB922FD6BC700560581 /* whackBad.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,9 +138,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				889DDBAC22FD6A3400560581 /* Main.storyboard in Resources */,
+				88E14A6222FD8AC200B9C039 /* whack.caf in Resources */,
 				889DDBA322FD6A3400560581 /* GameScene.sks in Resources */,
 				889DDBAE22FD6A3800560581 /* Assets.xcassets in Resources */,
 				889DDBB122FD6A3800560581 /* LaunchScreen.storyboard in Resources */,
+				88E14A6322FD8AC400B9C039 /* whackBad.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
