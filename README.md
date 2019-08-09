@@ -106,5 +106,5 @@
 - https://vimeo.com/291590798
 
 **Day 52**
-- Topics - UISlider while also getting some practice with UIImagePickerController.
+- Topics - UISlider while also getting some practice with UIImagePickerController and saving to iOS Photos.
 - Folder: P13 InstaFilter
