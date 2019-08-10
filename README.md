@@ -109,7 +109,11 @@
 - Topics - UISlider while also getting some practice with UIImagePickerController and saving to iOS Photos.
 - Folder: P13 InstaFilter, P13X InstaFilter
 
-**Day 55**
+**Day 55 / 56**
 - Topics - SKCropNode, SKTexture, and more.
-- Folder: P14 Whack-A-Penguin
+- Folder: P14 Whack-A-Penguin, P14X Whack-A-Penguin
+
+**Day 57**
+- Topics - animate(withDuration:), CGAffineTransform, alpha, and more.
+- Folder - 
 
