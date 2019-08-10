@@ -13,7 +13,7 @@
 
 **Day 18**
 - Folder: P01X StormViewer
-- Challenge changes from the StormViewer project.
+- Challenge changes from the StormViewer project and interface builder updates, array sorting.
 
 **Day 19 / 20**
 - Folder: P02 GuessTheFlag
@@ -21,7 +21,7 @@
 
 **Day 21**
 - Folder: P02X GuessTheFlag
-- Challenge changes from the GuessTheFlag project.
+- Challenge changes from the GuessTheFlag project, simple UI changes and a new UIAlertController.
 
 **Day 22** 
 - Folder: P03 StormViewerActivity (based on P01 StormViewer)
@@ -29,7 +29,7 @@
 
 **Day 23**
 - Folder: X01 WorldFlagsViewer
-- Milestone project challenge
+- Milestone project challenge covering projects 1 to 3.
 
 **Day 24 / 25**
 - Folder: P04 SimpleBrowser
@@ -37,7 +37,7 @@
 
 **Day 26**
 - Folder: P04X SimpleBrowser (based on P04 SimpleBrowser)
-- Challenge changes from the SimpleBrowser project.
+- Challenge changes from the SimpleBrowser project, webView navigation and add a UITableView as a new initial screen.
 
 **Day 27 / 28**
 - Folder: P05 WordScrable
@@ -45,7 +45,7 @@
 
 **Day 29**
 - Folder: P05X WordScrable (based on P05 WordScrable)
-- Challenge changes from the WordScrable project.
+- Challenge changes from the WordScrable project, refactoring and added UIAlertController etc.
 
 **Day 30**
 - Folder: P06A GuessTheFlag (based on P02X GuessTheFlag)
@@ -55,7 +55,7 @@
 - Folder: P06B Autolayout
 - Folder: P06X AutoLayoutAnchors
 - Topics: advanced Visual Formatting Language and Auto Layout anchors.
-- Challenge changes from the Autolayout project.
+- Challenge changes from the Autolayout project, added further anchors etc.
 
 **Day 32**
 - Folder: X02 - Shopping List 
@@ -66,12 +66,13 @@
 - Folder: P07 WhiteHousePetitions
 - Folder: P07X WhiteHousePetitions (based on P07 WhiteHousePetitions)
 - Topics: UITabBarController, Data, Codable, UITabBarController and UIStoryboard.
+- Challenge changes, add a new UIBarButtonItem + UIAlertController and filter results etc.
 
 **Day 36 / 37 / 38**
 - Folder: P08 SwiftyWords
-- Folder: P08C SwiftyWords (based on P08 SwiftyWords)
+- Folder: P08X SwiftyWords (based on P08 SwiftyWords)
 - Topics:  Text alignment, layout margins, UIFont, addTarget, enumerated, joined, replacingOccurences and more.
-- Challenge changes also.
+- Challenge changes from P08 SwiftyWords, UI changes and game logic.
 
 **Day 39**
 - Folder: P09A WhiteHousePetitions (based on P07X WhiteHousePetitions) - DispatchQueue.global - async, DispatchQueue.main.async
@@ -87,7 +88,7 @@
 
 **Day 41**
 - Folder: X03 Hangman
-- Milestone project challenge
+- Milestone project challenge for Projects 7 to 9
 
 **Day 42 / 43 / 44**
 - Folder: P10 NamesToFaces
@@ -98,16 +99,21 @@
 - Folder: P11 Pachinko
 - Folder: P11X Pachinko (based on P11 Pachinko)
 - Topics: SpiteKit, SKSpriteNode and SKPhysicsBody
+- Challenge changes, use new images, position changes and game logic changes.
 
 **Day 48 / 49**
-- Folder: P12 UserDefaults
+- Folder: P12 UserDefaults - test project just showing some methods.
 - Folder: P12A NamesToFaces NSCoding (based on P10X NamesTofaces)
 - Folder: P12B NamesToFaces Codable (based on P10X NamesTofaces)
+- Folder: P12X StormViewer (based on P09X StormViewer)
+- Folder: P12X GuessTheFlag (based on P06A GuessTheFlag)
+- Folder: P12X WordScrable (based on P05X WordScrable)
 - Topics: UserDefaults, NSCoding (Objective C compatible), Codable (Not Objective C compatible), NSKeyedArchiver, NSKeyedUnarchiver, JSONEncoder and JSONDecoder
+- Challenge changes, update older projects and add UserDefaults
 
 **Day 50**
 - Folder: X04 CameraCaptions
-- Milestone project challenge
+- Milestone project challenge projects 10 to 12
 
 **Day 51**
 - Watching a couple of conference videos
@@ -118,11 +124,13 @@
 - Topics - UISlider while also getting some practice with UIImagePickerController and saving to iOS Photos.
 - Folder: P13 InstaFilter
 - Folder: P13X InstaFilter (based on P13 InstaFilter)
+- Challenge changes from P13 InstaFilter, additional slider for filter property and UI changes.
 
 **Day 55 / 56**
 - Topics - SKCropNode, SKTexture, and more.
 - Folder: P14 Whack-A-Penguin
 - Folder: P14X Whack-A-Penguin (based on P14 Whack-A-Penguin)
+- Challenge changes from P14X Whack-A-Penguin, created a game over sound file, additional SKLabelNode and new SKEmitterNode for mud.
 
 **Day 57**
 - Topics - animate(withDuration:), CGAffineTransform, alpha, and more.
