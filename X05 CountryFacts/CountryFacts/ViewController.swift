@@ -14,6 +14,8 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Country Facts"
+        
         DispatchQueue.global(qos: .userInitiated).async {
             [weak self] in
             if let datafile = Bundle.main.url(forResource: "countries", withExtension: "json") {
@@ -33,17 +35,19 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Country", for: indexPath)
         
-        let petition = countries[indexPath.row]
-        cell.textLabel?.text = petition.name
-        //cell.detailTextLabel?.text = petition.body
+        let country = countries[indexPath.row]
+        cell.textLabel?.text = country.name
+        //cell.detailTextLabel?.text = country.body
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = DetailViewController()
-//        vc.detailItem = filteredPetitions[indexPath.row]
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "sb_Detail") as? DetailTableViewController {
+            vc.country = countries[indexPath.row]
+            
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
     
     func parse(json: Data) {
         let decoder = JSONDecoder()

@@ -141,6 +141,6 @@
 - Challenge changes, update older projects with animations
 
 **Day 59**
-- Milestone project challenge 13 to 15
 - Folder: X05 CountryFacts
+- Milestone project challenge 13 to 15
 

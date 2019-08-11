@@ -15,6 +15,7 @@
 		889E2DDC2300712F00F333C1 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E2DDB2300712F00F333C1 /* Country.swift */; };
 		889E2DDE230073BB00F333C1 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E2DDD230073BB00F333C1 /* Countries.swift */; };
 		889E2DE023007BC900F333C1 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 889E2DDF2300760C00F333C1 /* countries.json */; };
+		889E2DE2230082F400F333C1 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E2DE1230082F400F333C1 /* DetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		889E2DDB2300712F00F333C1 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		889E2DDD230073BB00F333C1 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 		889E2DDF2300760C00F333C1 /* countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		889E2DE1230082F400F333C1 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				886226B723006ED0000E2142 /* ViewController.swift */,
 				889E2DDF2300760C00F333C1 /* countries.json */,
 				886226B923006ED0000E2142 /* Main.storyboard */,
+				889E2DE1230082F400F333C1 /* DetailTableViewController.swift */,
 				889E2DDB2300712F00F333C1 /* Country.swift */,
 				889E2DDD230073BB00F333C1 /* Countries.swift */,
 				886226BC23006ED1000E2142 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				886226B823006ED0000E2142 /* ViewController.swift in Sources */,
+				889E2DE2230082F400F333C1 /* DetailTableViewController.swift in Sources */,
 				889E2DDC2300712F00F333C1 /* Country.swift in Sources */,
 				889E2DDE230073BB00F333C1 /* Countries.swift in Sources */,
 				886226B623006ED0000E2142 /* AppDelegate.swift in Sources */,
