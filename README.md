@@ -140,5 +140,7 @@
 - Folder: P15X GuessTheFlag (based on P06A GuessTheFlag aka Project 2)
 - Challenge changes, update older projects with animations
 
-
+**Day 59**
+- Milestone project challenge 13 to 15
+- Folder: X05 CountryFacts
 

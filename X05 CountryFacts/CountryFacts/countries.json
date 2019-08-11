@@ -1,0 +1,29 @@
+{
+    "items": [
+        {
+            "name": "United Kingdom",
+            "capitalCity": "London",
+            "currency": "Pounds"
+        },
+        {
+            "name": "United States",
+            "capitalCity": "Washington",
+            "currency": "Dollars"
+        },
+        {
+            "name": "Germany",
+            "capitalCity": "Berlin",
+            "currency": "Euros"
+        },
+        {
+            "name": "France",
+            "capitalCity": "Paris",
+            "currency": "Euros"
+        },
+        {
+            "name": "Canada",
+            "capitalCity": "Ottawa",
+            "currency": "Dollars"
+        }
+    ]
+}
