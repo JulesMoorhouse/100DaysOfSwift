@@ -60,15 +60,23 @@ class ViewController: UIViewController {
         if (score >= 10) {
             message += "Your final score was \(score)"
         }
-        else {
-            message += "Your score is \(score)"
+        
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 5, options: [], animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+
+        }) {finished in
+            sender.transform = .identity
         }
-        
-        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-        
-        present(ac, animated: true)
+    
+        if (message != "") {
+            let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            
+            ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
+            
+            present(ac, animated: true)
+        } else {
+            askQuestion()
+        }
     }
     
 }
