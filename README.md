@@ -136,7 +136,7 @@
 - Topics - animate(withDuration:), CGAffineTransform, alpha, and more.
 - Folder - P15 Animation
 
-- Folder: P15X SwiftyWords (based on P09X SwiftyWords - aka Project 8) TODO
+- Folder: P15X SwiftyWords (based on P09X SwiftyWords - aka Project 8)
 - Folder: P15X InstaFilter (based on P13X InstaFilter aka Project 13) TODO
 - Folder: P15X GuessTheFlag (based on P06A GuessTheFlag aka Project 2) TODO
 

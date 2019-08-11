@@ -115,15 +115,21 @@ class ViewController: UIViewController {
         
         for row in 0..<4 {
             for column in 0..<5 {
-                let letterButtton = UIButton(type: .system)
-                letterButtton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
-                letterButtton.setTitle("WWW", for: .normal)
+                let letterButton = UIButton(type: .system)
+                letterButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
+                letterButton.setTitle("WWW", for: .normal)
                 
+                letterButton.showsTouchWhenHighlighted = true
+
                 let frame = CGRect(x: column * width, y: row * height, width: width, height: height)
-                letterButtton.frame = frame
-                letterButtton.addTarget(self, action: #selector(letterTapped), for: .touchUpInside)
-                buttonsView.addSubview(letterButtton)
-                letterButtons.append(letterButtton)
+                letterButton.frame = frame
+
+                let buttonBlue = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1.0)
+
+                letterButton.setTitleColor(buttonBlue, for: .normal)
+                letterButton.addTarget(self, action: #selector(letterTapped), for: .touchUpInside)
+                buttonsView.addSubview(letterButton)
+                letterButtons.append(letterButton)
             }
         }
     }
@@ -141,7 +147,11 @@ class ViewController: UIViewController {
         
         currentAnswer.text = currentAnswer.text?.appending(buttonTitle)
         activatedButtons.append(sender)
-        sender.isHidden = true
+        
+        UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
+            sender.alpha = 0.0
+        }, completion: nil)
+        
     }
 
     @objc func submitTapped(_ sender: UIButton) {
@@ -176,7 +186,7 @@ class ViewController: UIViewController {
         currentAnswer.text = ""
         
         for button in activatedButtons {
-            button.isHidden = false
+            button.alpha = 1
         }
         
         activatedButtons.removeAll()
