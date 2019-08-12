@@ -43,6 +43,41 @@
             </objects>
             <point key="canvasLocation" x="865.21739130434787" y="782.8125"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="gSa-0N-y8x">
+            <objects>
+                <viewController storyboardIdentifier="sb_DetailViewController" id="zmL-Pt-HDQ" customClass="DetailViewController" customModule="CapitalCities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Kl-nG-YMH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzi-lb-xuz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kzi-lb-xuz" firstAttribute="top" secondItem="wkt-iJ-cwg" secondAttribute="top" id="65L-7O-5LJ"/>
+                            <constraint firstAttribute="trailing" secondItem="kzi-lb-xuz" secondAttribute="trailing" id="6sz-LB-MOr"/>
+                            <constraint firstItem="kzi-lb-xuz" firstAttribute="bottom" secondItem="4Kl-nG-YMH" secondAttribute="bottom" id="I80-Ih-JlU"/>
+                            <constraint firstItem="kzi-lb-xuz" firstAttribute="leading" secondItem="4Kl-nG-YMH" secondAttribute="leading" id="TRA-oC-Xwb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wkt-iJ-cwg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Oqz-yN-0Kz"/>
+                    <connections>
+                        <outlet property="webView" destination="kzi-lb-xuz" id="Znu-pX-q8g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yjC-cK-9O6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2457.971014492754" y="780.80357142857144"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="typ-UQ-0gu">
             <objects>
@@ -60,6 +95,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YnE-3Z-1zo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="782.8125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iNb-c7-e8u">
+            <objects>
+                <navigationController storyboardIdentifier="sb_DetailNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="sl8-gq-PIR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nSV-4i-ADn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zmL-Pt-HDQ" kind="relationship" relationship="rootViewController" id="WME-PQ-dVs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O8C-Om-WhO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1547.8260869565217" y="780.80357142857144"/>
         </scene>
     </scenes>
 </document>

@@ -17,13 +17,15 @@ class ViewController: UIViewController, MKMapViewDelegate {
 
         title = "Capital Cities"
         
-        let london = Capital(title: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), info: "Home to the 2012 Summer Olympics")
-        let oslo = Capital(title: "Oslo", coordinate: CLLocationCoordinate2D(latitude: 59.95, longitude: 10.75), info: "Founded over a thousand years ago")
-        let paris = Capital(title: "Paris", coordinate: CLLocationCoordinate2D(latitude: 48.8567, longitude: 2.3508), info: "Often called the City of Light")
-        let rome = Capital(title: "Rome", coordinate: CLLocationCoordinate2D(latitude: 41.9, longitude: 12.5), info: "Has a whole country inside it.")
-        let washington = Capital(title: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667), info: "Named after George himself.")
+        let london = Capital(title: "London", coordinate: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), info: "Home to the 2012 Summer Olympics", wikiUrl: "https://en.wikipedia.org/wiki/London")
+        let oslo = Capital(title: "Oslo", coordinate: CLLocationCoordinate2D(latitude: 59.95, longitude: 10.75), info: "Founded over a thousand years ago", wikiUrl: "https://en.wikipedia.org/wiki/oslo")
+        let paris = Capital(title: "Paris", coordinate: CLLocationCoordinate2D(latitude: 48.8567, longitude: 2.3508), info: "Often called the City of Light", wikiUrl: "https://en.wikipedia.org/wiki/Paris")
+        let rome = Capital(title: "Rome", coordinate: CLLocationCoordinate2D(latitude: 41.9, longitude: 12.5), info: "Has a whole country inside it.", wikiUrl: "https://en.wikipedia.org/wiki/Rome")
+        let washington = Capital(title: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667), info: "Named after George himself.", wikiUrl: "https://en.wikipedia.org/wiki/Washington,_D.C.")
         
         mapView.addAnnotations([london, oslo, paris, rome, washington])
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(changeMapStyle))
     }
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -31,7 +33,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         let identifier = "Capital"
         
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView
         
         if annotationView == nil {
             annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
@@ -43,17 +45,33 @@ class ViewController: UIViewController, MKMapViewDelegate {
             annotationView?.annotation = annotation
         }
         
+        annotationView?.pinTintColor = .cyan
+        
         return annotationView
     }
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let capital = view.annotation as? Capital else { return }
         
-        let placeName = capital.title
-        let placeInfo = capital.info
-        
-        let ac = UIAlertController(title: placeName, message: placeInfo, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        mapView.deselectAnnotation(view.annotation, animated: true)
+
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "sb_DetailViewController") as? DetailViewController {
+            vc.capital = capital
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    @objc func changeMapStyle() {
+        let ac = UIAlertController(title: "Map Style", message: nil, preferredStyle: .actionSheet)
+        ac.addAction(UIAlertAction(title: "Hybrid", style: .default, handler: { (action) in
+            self.mapView.mapType = .hybrid
+        }))
+        ac.addAction(UIAlertAction(title: "Satellite", style: .default, handler: { (action) in
+            self.mapView.mapType = .satellite
+        }))
+        ac.addAction(UIAlertAction(title: "Standard", style: .default, handler: { (action) in
+            self.mapView.mapType = .standard
+        }))
         present(ac, animated: true)
     }
 }
