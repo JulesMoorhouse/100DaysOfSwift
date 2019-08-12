@@ -151,6 +151,6 @@
 - Challenge changes, add webview for wiki details shown via annotationView
 
 **Day 62**
-- Topics - Pixel-perfect collision detection, Timer, linearDamping, and more.
+- Topics - Pixel-perfect collision detection, advancing particle systems, Timer, linear and angular Damping, and more.
 - Folder - P17 Space Race
 
