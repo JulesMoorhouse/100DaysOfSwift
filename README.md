@@ -147,4 +147,10 @@
 **Day 60**
 - Topics - MKMapView, MKAnnotation, MKPinAnnotationView, CLLocationCoordinate2D, and more.
 - Folder - P16 CapitalCities
+- Folder - P16X CapitalCities (based on P16 CapitalCities)
+- Challenge changes, add webview for wiki details shown via annotationView
+
+**Day 62**
+- Topics - Pixel-perfect collision detection, Timer, linearDamping, and more.
+- Folder - P17 Space Race
 
