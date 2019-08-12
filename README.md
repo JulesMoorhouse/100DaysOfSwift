@@ -145,6 +145,6 @@
 - Milestone project challenge 13 to 15
 
 **Day 60**
-- Topics - MKMapView, MKAnnotation, CLLocationCoordinate2D, and more.
+- Topics - MKMapView, MKAnnotation, MKPinAnnotationView, CLLocationCoordinate2D, and more.
 - Folder - P16 CapitalCities
 
