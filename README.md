@@ -153,4 +153,5 @@
 **Day 62**
 - Topics - Pixel-perfect collision detection, advancing particle systems, Timer, linear and angular Damping, and more.
 - Folder - P17 Space Race
-
+- Folder - P17X Space Race (based on P17 Space Race)
+- Challenge changes, added game restrictions and difficulty.
