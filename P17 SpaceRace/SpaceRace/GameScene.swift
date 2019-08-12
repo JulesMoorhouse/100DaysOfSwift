@@ -27,7 +27,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func didMove(to view: SKView) {
         backgroundColor = .black
         
-        starField = SKEmitterNode(fileNamed: "starfield")!
+        starField = SKEmitterNode(fileNamed: "starfield")! // file built into bundle / essential to app, therefore fore unwrap is justified and should crash if the file isn't present
         starField.position = CGPoint(x: 1024, y: 384) // right edge / half way off
         starField.advanceSimulationTime(10) // add 10 seconds of starfield now, so we have something at startup rather than a black screen
         addChild(starField)
@@ -63,6 +63,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if !isGameOver {
             score += 1
         }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        var location = touch.location(in: self)
+        
+        if location.y < 100 {
+            location.y = 100
+        } else if location.y > 668 {
+            location.y = 668
+        }
+        
+        player.position = location
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        // end game when player hits a piece of space debris
+        
+        let explosion = SKEmitterNode(fileNamed: "explosion")!
+        explosion.position = player.position
+        addChild(explosion)
+        
+        player.removeFromParent()
+        isGameOver = true
     }
     
     @objc func createEnemy() {
