@@ -162,4 +162,5 @@
 - Challenge, debugging and changing values of older projects (didn't commit)
 
 **Day 66**
+- Folder: X06 ShootingGalleryS
 - Milestone project challenge projects 16 to 18
