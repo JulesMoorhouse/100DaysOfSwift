@@ -144,14 +144,18 @@
 - Folder: X05 CountryFacts
 - Milestone project challenge 13 to 15
 
-**Day 60**
+**Day 60 / 61**
 - Topics - MKMapView, MKAnnotation, MKPinAnnotationView, CLLocationCoordinate2D, and more.
 - Folder - P16 CapitalCities
 - Folder - P16X CapitalCities (based on P16 CapitalCities)
 - Challenge changes, add webview for wiki details shown via annotationView
 
-**Day 62**
+**Day 62 / 63**
 - Topics - Pixel-perfect collision detection, advancing particle systems, Timer, linear and angular Damping, and more.
 - Folder - P17 Space Race
 - Folder - P17X Space Race (based on P17 Space Race)
 - Challenge changes, added game restrictions and difficulty.
+
+**Day 64 / 65**
+- Folder: P18 Debugging
+- Topics: Print, assert, breakpoints and view debugging.
