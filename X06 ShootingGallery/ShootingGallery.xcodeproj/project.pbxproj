@@ -14,6 +14,12 @@
 		8844E9FA2301D31C00436B53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8844E9F82301D31C00436B53 /* Main.storyboard */; };
 		8844E9FC2301D31D00436B53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8844E9FB2301D31D00436B53 /* Assets.xcassets */; };
 		8844E9FF2301D31D00436B53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8844E9FD2301D31D00436B53 /* LaunchScreen.storyboard */; };
+		8844EA092302CACC00436B53 /* shot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8844EA062302CACB00436B53 /* shot.wav */; };
+		8844EA0A2302CACC00436B53 /* empty.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8844EA072302CACB00436B53 /* empty.wav */; };
+		8844EA0B2302CACC00436B53 /* reload.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8844EA082302CACC00436B53 /* reload.wav */; };
+		8844EA0F2302CD9100436B53 /* whackBad.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8844EA0D2302CC4A00436B53 /* whackBad.caf */; };
+		8844EA102302CD9400436B53 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8844EA0C2302CC4900436B53 /* whack.caf */; };
+		8844EA112302CD9700436B53 /* gameOver.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8844EA0E2302CC4A00436B53 /* gameOver.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		8844E9FB2301D31D00436B53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8844E9FE2301D31D00436B53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8844EA002301D31D00436B53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8844EA062302CACB00436B53 /* shot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shot.wav; sourceTree = "<group>"; };
+		8844EA072302CACB00436B53 /* empty.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = empty.wav; sourceTree = "<group>"; };
+		8844EA082302CACC00436B53 /* reload.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = reload.wav; sourceTree = "<group>"; };
+		8844EA0C2302CC4900436B53 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = whack.caf; path = "../../P14X WhackAPenguin/WhackAPenguin/whack.caf"; sourceTree = "<group>"; };
+		8844EA0D2302CC4A00436B53 /* whackBad.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = whackBad.caf; path = "../../P14X WhackAPenguin/WhackAPenguin/whackBad.caf"; sourceTree = "<group>"; };
+		8844EA0E2302CC4A00436B53 /* gameOver.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = gameOver.caf; path = "../../P14X WhackAPenguin/WhackAPenguin/gameOver.caf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,12 @@
 				8844E9FB2301D31D00436B53 /* Assets.xcassets */,
 				8844E9FD2301D31D00436B53 /* LaunchScreen.storyboard */,
 				8844EA002301D31D00436B53 /* Info.plist */,
+				8844EA072302CACB00436B53 /* empty.wav */,
+				8844EA082302CACC00436B53 /* reload.wav */,
+				8844EA062302CACB00436B53 /* shot.wav */,
+				8844EA0E2302CC4A00436B53 /* gameOver.caf */,
+				8844EA0C2302CC4900436B53 /* whack.caf */,
+				8844EA0D2302CC4A00436B53 /* whackBad.caf */,
 			);
 			path = ShootingGallery;
 			sourceTree = "<group>";
@@ -128,7 +146,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8844EA092302CACC00436B53 /* shot.wav in Resources */,
+				8844EA0F2302CD9100436B53 /* whackBad.caf in Resources */,
+				8844EA112302CD9700436B53 /* gameOver.caf in Resources */,
+				8844EA102302CD9400436B53 /* whack.caf in Resources */,
 				8844E9FA2301D31C00436B53 /* Main.storyboard in Resources */,
+				8844EA0A2302CACC00436B53 /* empty.wav in Resources */,
+				8844EA0B2302CACC00436B53 /* reload.wav in Resources */,
 				8844E9F12301D31C00436B53 /* GameScene.sks in Resources */,
 				8844E9FC2301D31D00436B53 /* Assets.xcassets in Resources */,
 				8844E9FF2301D31D00436B53 /* LaunchScreen.storyboard in Resources */,
