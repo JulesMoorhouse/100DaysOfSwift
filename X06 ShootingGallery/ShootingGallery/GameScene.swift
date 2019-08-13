@@ -16,7 +16,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     var reloadLabel: SKLabelNode!
     var scoreLabel: SKLabelNode!
     var remainLabel: SKLabelNode!
-    var gameOver: SKShapeNode!
+    var gameOver: SKSpriteNode!
+    var startGameLabel: SKLabelNode!
     
     var timerBottom: Timer?
     var timerMiddle: Timer?
@@ -27,6 +28,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     var timerIntervalMiddle: Double = 0.7
     var timerIntervalTop: Double = 0.5
 
+    var isGameOver = false
+    
     var soundsFiles = ["shot.wav", "empty.wav", "reload.wav", "whack.caf", "whackBad.caf"]
     enum sounds: Int {
         case shot = 0
@@ -38,7 +41,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     
     // Sounds for preload
     var sound: [SKAction] = []
-
     
     var score: Int = 0 {
         didSet {
@@ -106,20 +108,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         reloadLabel.zPosition = 50
         addChild(reloadLabel)
 
+        startGameLabel = SKLabelNode(fontNamed: "Chalkduster")
+        startGameLabel.text = "Start Game"
+        startGameLabel.position = CGPoint(x: 512, y: 90)
+        startGameLabel.zPosition = 50
+        startGameLabel.horizontalAlignmentMode = .center
+        //addChild(startGameLabel)
+        
         scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
         scoreLabel.text = "Score: 0"
         scoreLabel.position = CGPoint(x: 100, y: 20)
         scoreLabel.zPosition = 50
         addChild(scoreLabel)
 
+        gameOver = SKSpriteNode(imageNamed: "game-over")
+        gameOver.position = CGPoint(x: 512, y: 384)
+        gameOver.zPosition = 50
+        
         remainLabel = SKLabelNode(fontNamed: "Chalkduster")
         remainLabel.text = "Time Left: 60"
         remainLabel.position = CGPoint(x: 20, y: 730)
         remainLabel.horizontalAlignmentMode = .left
         remainLabel.zPosition = 50
         addChild(remainLabel)
-        
-        timerRemain = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(countDownTimer), userInfo: nil, repeats: true)
 
         physicsWorld.gravity = .zero
         physicsWorld.contactDelegate = self // tell us when contacts happen
@@ -131,9 +142,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             addChild(bullet.node!)
         }
         
-        topRow()
-        middleRow()
-        bottomRow()
+        startGame()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -143,14 +152,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         
         var hitSomething = false
         
+        if isGameOver {
+            if tappedNodes.contains(startGameLabel) {
+                startGame()
+            }
+            return
+        }
+        
         if !bullets.contains(where: {( $0.used == false )}) {
             if tappedNodes.contains(reloadLabel) && reloadLabel.text != "" {
-                reloadMode.toggle()
-                bullets = bullets.map({ (bullet) -> Bullet in
-                    bullet.used = false
-                    bullet.node?.texture = SKTexture(imageNamed: "shotFull")
-                    return bullet
-                })
+                //reloadMode.toggle()
+                resetBullets()
                 run(SKAction.playSoundFileNamed("reload.wav", waitForCompletion: false))
             }
             return
@@ -159,18 +171,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         useBullet()
         
         for node in tappedNodes {
-            //print("tapped \(String(describing: node.name))")
             
             guard let item = node.parent as? SpriteNode else { continue }
             
             let sprite = item.sprite!
             
             if (sprite.name == "bad") {
-                print("play bad")
                 run(sound[sounds.whackBad.rawValue])
                 
             } else if (sprite.name == "good") {
-                print("play good")
                 run(sound[sounds.whackGood.rawValue])
 
                 let goodScore = SKLabelNode(fontNamed: "Chalkduster")
@@ -191,11 +200,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             if (sprite.name == "bad") || (sprite.name == "good") {
                 hitSomething = true
                 sprite.run(fadeGroup())
+                
+                score -= 10
             }
         }
         
         if !hitSomething {
-            print("play miss")
             run(sound[sounds.shot.rawValue])
         }
     }
@@ -261,12 +271,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     }
     
     func useBullet() {
-       // print("useBullet")
         var counter = 0
         
         for bullet in bullets {
             counter += 1
-            print("counter=\(counter)")
             if let used = bullet.used {
                 if !used {
                     bullet.node?.texture = SKTexture(imageNamed: "shotEmpty")
@@ -286,10 +294,40 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         
         if countDown <= 0 {
             timerRemain?.invalidate()
+            addChild(gameOver)
+            isGameOver = true
+            addChild(startGameLabel)
         } else if countDown <= 3 {
             timerTop?.invalidate()
             timerMiddle?.invalidate()
             timerBottom?.invalidate()
         }
+    }
+    
+    func resetTimer() {
+        timerRemain = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(countDownTimer), userInfo: nil, repeats: true)
+    }
+    
+    func resetBullets() {
+        bullets = bullets.map({ (bullet) -> Bullet in
+            bullet.used = false
+            bullet.node?.texture = SKTexture(imageNamed: "shotFull")
+            return bullet
+        })
+        reloadMode = false
+    }
+    
+    func startGame() {
+        countDown = 60
+        score = 0
+        gameOver.removeFromParent()
+        startGameLabel.removeFromParent()
+        
+        topRow()
+        middleRow()
+        bottomRow()
+        
+        isGameOver = false
+        resetTimer()
     }
 }
