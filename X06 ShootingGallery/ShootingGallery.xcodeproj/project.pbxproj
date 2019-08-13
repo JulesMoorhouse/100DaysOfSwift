@@ -20,6 +20,7 @@
 		8844EA0F2302CD9100436B53 /* whackBad.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8844EA0D2302CC4A00436B53 /* whackBad.caf */; };
 		8844EA102302CD9400436B53 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8844EA0C2302CC4900436B53 /* whack.caf */; };
 		8844EA112302CD9700436B53 /* gameOver.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8844EA0E2302CC4A00436B53 /* gameOver.caf */; };
+		8844EA132302EB4700436B53 /* SpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8844EA122302EB4700436B53 /* SpriteNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8844EA0C2302CC4900436B53 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = whack.caf; path = "../../P14X WhackAPenguin/WhackAPenguin/whack.caf"; sourceTree = "<group>"; };
 		8844EA0D2302CC4A00436B53 /* whackBad.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = whackBad.caf; path = "../../P14X WhackAPenguin/WhackAPenguin/whackBad.caf"; sourceTree = "<group>"; };
 		8844EA0E2302CC4A00436B53 /* gameOver.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = gameOver.caf; path = "../../P14X WhackAPenguin/WhackAPenguin/gameOver.caf"; sourceTree = "<group>"; };
+		8844EA122302EB4700436B53 /* SpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				8844E9EE2301D31C00436B53 /* AppDelegate.swift */,
 				8844E9F02301D31C00436B53 /* GameScene.sks */,
 				8844E9F42301D31C00436B53 /* GameScene.swift */,
+				8844EA122302EB4700436B53 /* SpriteNode.swift */,
 				8844E9F62301D31C00436B53 /* GameViewController.swift */,
 				8844E9F82301D31C00436B53 /* Main.storyboard */,
 				8844E9FB2301D31D00436B53 /* Assets.xcassets */,
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8844EA132302EB4700436B53 /* SpriteNode.swift in Sources */,
 				8844E9F52301D31C00436B53 /* GameScene.swift in Sources */,
 				8844E9F72301D31C00436B53 /* GameViewController.swift in Sources */,
 				8844E9EF2301D31C00436B53 /* AppDelegate.swift in Sources */,
