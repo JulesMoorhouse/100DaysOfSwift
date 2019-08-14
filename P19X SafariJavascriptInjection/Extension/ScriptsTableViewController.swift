@@ -19,6 +19,7 @@ class ScriptsTableViewController: UITableViewController {
         super.viewDidLoad()
 
         title = "Scripts"
+        load()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewScript))
         
@@ -69,6 +70,7 @@ class ScriptsTableViewController: UITableViewController {
                 [weak self] (item) in
                 // update
                 self?.items[indexPath.row] = item
+                self?.save()
                 self?.tableView.reloadData()
             }
             navigationController?.pushViewController(vc, animated: true)
@@ -95,9 +97,37 @@ class ScriptsTableViewController: UITableViewController {
                 [weak self] (item) in
                 // add
                 self?.items.append(item)
+                self?.save()
                 self?.tableView.reloadData()
             }
             navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func save() {
+        let jsonEncoder = JSONEncoder()
+        
+        if let savedData = try? jsonEncoder.encode(items) {
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: "items")
+            print("Saved data")
+        } else {
+            print("Failed to save items")
+        }
+    }
+    
+    func load() {
+        let defaults = UserDefaults.standard
+        
+        if let savedItems = defaults.object(forKey: "items") as? Data {
+            let jsonDecoder = JSONDecoder()
+            
+            do {
+                items = try jsonDecoder.decode([SiteScript].self, from: savedItems)
+                print("Loaded data")
+            } catch {
+                print("Failed to load items.")
+            }
         }
     }
 }
