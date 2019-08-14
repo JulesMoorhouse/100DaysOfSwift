@@ -7,7 +7,8 @@ run: function(paramaters) {
 },
     
 finalize: function(paramaters) {
-    
+    var customJavaScript = paramaters["customJavaScript"];
+    eval(customJavaScript);
 }
     
 };
