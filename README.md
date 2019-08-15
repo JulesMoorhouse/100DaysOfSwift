@@ -172,5 +172,5 @@
 - Challenge changes, add a table view to list scripts and use UserDefaults to store them, tap to run, disclosure to edit.
 
 **Day 70 / 71**
-- Topics:
-- Folder: 
+- Topics: UIBezierPath, SKAction.follow(), for case let, and more.
+- Folder: P20 FireworksNight
