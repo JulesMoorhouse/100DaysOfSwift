@@ -177,4 +177,10 @@
 - Folder: P20X FireworksNight (based on P20 FireworksNight)
 - Challenge, added action sequence to remove sprite, added game over etc
 
+**Day 72 / 73**
+- Topics: UNUserNotificationCenter
+- Folder: P21 LocalNotifications
+- Folder: P21X LocalNotifications (based on P21 LocalNotifications)
+- Folder: P21X GuessTheFlag (based on P15X GuessTheFlag)
+- Challenge changes, update projects to update or add user notifications
 
