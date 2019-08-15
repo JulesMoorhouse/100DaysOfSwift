@@ -40,6 +40,51 @@ class GameScene: SKScene {
         gameTimer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(launchFireworks), userInfo: nil, repeats: true)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        checkTouches(touches)
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+        checkTouches(touches)
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        for (index, firework) in fireworks.enumerated().reversed() {
+            if firework.position.y > 900 {
+                fireworks.remove(at: index)
+                firework.removeFromParent()
+            }
+        }
+    }
+    
+    func checkTouches(_ touches: Set<UITouch>) {
+        guard let touch = touches.first else { return }
+        
+        let location = touch.location(in: self) // where is touch
+        let nodesAtPoint = nodes(at: location) // all nodes under finger
+        
+        // find only nodes which are SKSpriteNodes
+        for case let node as SKSpriteNode in nodesAtPoint {
+            guard node.name == "firework" else { continue } // find only fireworks
+            
+            // ensure only one colour is selected at a time
+            for parent in fireworks { // parent is container node
+                guard let firework = parent.children.first as? SKSpriteNode else { continue } // exit if can't find spriteNode in parent node
+                
+                // are you currently selected and not equal to our new sprite colour
+                if firework.name == "selected" && firework.color != node.color {
+                    firework.name = "firework" // put it back to a regular firework
+                    firework.colorBlendFactor = 1
+                }
+            }
+            
+            node.name = "selected"
+            node.colorBlendFactor = 0 // go back to default / white colour
+        }
+    }
+    
     @objc func launchFireworks() {
         let movementAmount: CGFloat = 1800
         
