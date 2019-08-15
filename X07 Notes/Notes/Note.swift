@@ -8,12 +8,14 @@
 
 import Foundation
 
-struct Note {
+class Note: Codable {
     var uuid: String?
-    var name: String?
+    var content: String?
+    var folderUuid: String?
     
-    init(name: String) {
-        self.name = name
+    init(content: String, folderUuid: String) {
+        self.content = content
+        self.folderUuid = folderUuid
         self.uuid = UUID().uuidString
     }
 }

@@ -184,3 +184,6 @@
 - Folder: P21X GuessTheFlag (based on P15X GuessTheFlag)
 - Challenge changes, update projects to update or add user notifications
 
+**Day 74**
+- Folder: X07 Notes
+- Milestone project challenge 19 to 21

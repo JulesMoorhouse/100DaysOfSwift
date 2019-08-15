@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Folder {
+class Folder: Codable {
     var uuid: String?
     var name: String?
     
