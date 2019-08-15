@@ -121,20 +121,20 @@
 - https://vimeo.com/291590798
 
 **Day 52 / 53 / 54**
-- Topics - UISlider while also getting some practice with UIImagePickerController and saving to iOS Photos.
+- Topics: UISlider while also getting some practice with UIImagePickerController and saving to iOS Photos.
 - Folder: P13 InstaFilter
 - Folder: P13X InstaFilter (based on P13 InstaFilter aka Project 13)
 - Challenge changes from P13 InstaFilter, additional slider for filter property and UI changes.
 
 **Day 55 / 56**
-- Topics - SKCropNode, SKTexture, and more.
+- Topics: SKCropNode, SKTexture, and more.
 - Folder: P14 Whack-A-Penguin
 - Folder: P14X Whack-A-Penguin (based on P14 Whack-A-Penguin aka Project 14)
 - Challenge changes from P14X Whack-A-Penguin, created a game over sound file, additional SKLabelNode and new SKEmitterNode for mud.
 
 **Day 57 / 58**
-- Topics - animate(withDuration:), CGAffineTransform, alpha, and more.
-- Folder - P15 Animation
+- Topics: animate(withDuration:), CGAffineTransform, alpha, and more.
+- Folder: P15 Animation
 - Folder: P15X SwiftyWords (based on P09X SwiftyWords - aka Project 8)
 - Folder: P15X InstaFilter (based on P13X InstaFilter aka Project 13)
 - Folder: P15X GuessTheFlag (based on P06A GuessTheFlag aka Project 2)
@@ -145,15 +145,15 @@
 - Milestone project challenge 13 to 15
 
 **Day 60 / 61**
-- Topics - MKMapView, MKAnnotation, MKPinAnnotationView, CLLocationCoordinate2D, and more.
-- Folder - P16 CapitalCities
-- Folder - P16X CapitalCities (based on P16 CapitalCities)
+- Topics: MKMapView, MKAnnotation, MKPinAnnotationView, CLLocationCoordinate2D, and more.
+- Folder: P16 CapitalCities
+- Folder: P16X CapitalCities (based on P16 CapitalCities)
 - Challenge changes, add webview for wiki details shown via annotationView
 
 **Day 62 / 63**
-- Topics - Pixel-perfect collision detection, advancing particle systems, Timer, linear and angular Damping, and more.
-- Folder - P17 Space Race
-- Folder - P17X Space Race (based on P17 Space Race)
+- Topics: Pixel-perfect collision detection, advancing particle systems, Timer, linear and angular Damping, and more.
+- Folder: P17 Space Race
+- Folder: P17X Space Race (based on P17 Space Race)
 - Challenge changes, added game restrictions and difficulty.
 
 **Day 64 / 65**
@@ -162,5 +162,15 @@
 - Challenge, debugging and changing values of older projects (didn't commit)
 
 **Day 66**
-- Folder: X06 ShootingGalleryS
+- Folder: X06 ShootingGallery
 - Milestone project challenge projects 16 to 18
+
+**Day 67 / 68 / 69**
+- Topics: NSExtensionItem - creating a safari extension which runs JavaScript on a web page.
+- Folder: P19 SafariJavascriptInjection
+- Folder: P19X SafariJavascriptInjection (based on P19 SafariJavascriptInjection)
+- Challenge changes, add a table view to list scripts and use UserDefaults to store them, tap to run, disclosure to edit.
+
+**Day 70 / 71**
+- Topics:
+- Folder: 
