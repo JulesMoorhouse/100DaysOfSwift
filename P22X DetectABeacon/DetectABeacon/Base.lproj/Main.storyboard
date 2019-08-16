@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DetectABeacon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UNKNOWN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdW-7I-Hha">
+                                <rect key="frame" x="111" y="429" width="192" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBK-WK-fUb">
+                                <rect key="frame" x="178" y="514" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW6-5w-MIF">
+                                <rect key="frame" x="152" y="579" width="110" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="6"/>
+                                <state key="normal" title="Reselect"/>
+                                <connections>
+                                    <action selector="reSelectTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cZy-Gk-Rkd"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="un0-Sm-Lmn">
+                                <rect key="frame" x="74" y="113" width="266" height="266"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="un0-Sm-Lmn" secondAttribute="height" multiplier="1:1" id="DBl-Zv-FLO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vdW-7I-Hha" firstAttribute="top" secondItem="un0-Sm-Lmn" secondAttribute="baseline" constant="50" id="1gU-4G-At9"/>
+                            <constraint firstItem="un0-Sm-Lmn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="96z-2O-mhs"/>
+                            <constraint firstItem="OBK-WK-fUb" firstAttribute="top" secondItem="vdW-7I-Hha" secondAttribute="bottom" constant="37" id="BVc-io-dde"/>
+                            <constraint firstItem="vdW-7I-Hha" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Etj-Mb-s2U"/>
+                            <constraint firstItem="OBK-WK-fUb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RJG-7I-7bs"/>
+                            <constraint firstItem="vdW-7I-Hha" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="iOT-gx-zub"/>
+                            <constraint firstItem="TW6-5w-MIF" firstAttribute="top" secondItem="OBK-WK-fUb" secondAttribute="bottom" constant="44" id="jbL-za-riM"/>
+                            <constraint firstItem="TW6-5w-MIF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ud5-nq-bcw"/>
+                            <constraint firstItem="un0-Sm-Lmn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xoE-2a-CEV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="beaconIdentifier" destination="OBK-WK-fUb" id="fPa-Hy-4Fj"/>
+                        <outlet property="circleView" destination="un0-Sm-Lmn" id="F7w-4v-Z4x"/>
+                        <outlet property="distanceReading" destination="vdW-7I-Hha" id="9mf-18-7bc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

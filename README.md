@@ -191,4 +191,5 @@
 **Day 75 / 76**
 - Topics: Core Location, CLBeaconRegion, and more.
 - Folder: P22 DetectABeacon
-- Challenge, 
+- Folder: P22X DetectABeacon (based on P22 DetectABeacon)
+- Challenge, aded further beacons and a circle for range
