@@ -187,3 +187,8 @@
 **Day 74**
 - Folder: X07 Notes
 - Milestone project challenge 19 to 21
+
+**Day 75 / 76**
+- Topics: Core Location, CLBeaconRegion, and more.
+- Folder: P22 DetectABeacon
+- Challenge, 
