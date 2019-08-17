@@ -19,6 +19,7 @@ enum SequenceType: CaseIterable {
 
 enum NodeNames: String {
     case Enemy = "enemy"
+    case FastEnemy = "fastEnemy"
     case Bomb = "bomb"
     case BombContainer = "bombContainer"
     case Empty = ""
@@ -38,7 +39,9 @@ class GameScene: SKScene {
     
     var activeSliceBG: SKShapeNode!
     var activeSliceFG: SKShapeNode!
-    
+
+    var gameOver: SKSpriteNode!
+
     var activeSlicePoints = [CGPoint]()
     var isSwooshSoundActive = false
     var activeEnemies = [SKSpriteNode]()
@@ -97,6 +100,10 @@ class GameScene: SKScene {
         createLives()
         createSlices()
         
+        gameOver = SKSpriteNode(imageNamed: "game-over")
+        gameOver.position = CGPoint(x: 512, y: 384)
+        gameOver.zPosition = 50
+        
         // slow warm up to the game
         sequence = [.oneNoBomb, .oneNoBomb, .twoWithOneBomb, .twoWithOneBomb, .three, .one, .chain]
         
@@ -125,7 +132,7 @@ class GameScene: SKScene {
         let nodesAtPoint = nodes(at: location)
         
         for case let node as SKSpriteNode in nodesAtPoint {
-            if node.name == NodeNames.Enemy.rawValue {
+            if node.name == NodeNames.Enemy.rawValue || node.name == NodeNames.FastEnemy.rawValue {
                 // destroy the penguin
                 if let emitter = SKEmitterNode(fileNamed: "sliceHitEnemy") {
                     emitter.position = node.position
@@ -142,6 +149,10 @@ class GameScene: SKScene {
                 node.run(seq)
                 
                 score += 1
+                
+                if node.name == NodeNames.FastEnemy.rawValue {
+                    score += 2
+                }
                 
                 if let index = activeEnemies.firstIndex(of: node) {
                     activeEnemies.remove(at: index)
@@ -206,7 +217,7 @@ class GameScene: SKScene {
                 if node.position.y < -140 {
                     node.removeAllActions()
                     
-                    if node.name == NodeNames.Enemy.rawValue {
+                    if node.name == NodeNames.Enemy.rawValue || node.name == NodeNames.FastEnemy.rawValue {
                         node.name = NodeNames.Empty.rawValue
                         subtractLife()
                         
@@ -353,6 +364,10 @@ class GameScene: SKScene {
                 emitter.position = CGPoint(x: 76, y: 64)
                 enemy.addChild(emitter)
             }
+        } else if enemyType == 2 {
+            enemy = SKSpriteNode(imageNamed: "target3")
+            run(SKAction.playSoundFileNamed("launch.caf", waitForCompletion: false))
+            enemy.name = NodeNames.FastEnemy.rawValue
         } else {
             enemy = SKSpriteNode(imageNamed: "penguin")
             run(SKAction.playSoundFileNamed("launch.caf", waitForCompletion: false))
@@ -386,8 +401,13 @@ class GameScene: SKScene {
         
         var randomYVelocity = Int.random(in: minYVelocity...maxYVelocity)
         
-        randomXVelocity *= velocityAccelerator
-        randomYVelocity *= velocityAccelerator
+        if enemyType == 2 {
+            randomXVelocity *= fastVelocityAccelerator
+            randomYVelocity *= fastVelocityAccelerator
+        } else {
+            randomXVelocity *= velocityAccelerator
+            randomYVelocity *= velocityAccelerator
+        }
         
         enemy.physicsBody = SKPhysicsBody(circleOfRadius: 64)
         enemy.physicsBody?.velocity = CGVector(dx: randomXVelocity, dy: randomYVelocity)
@@ -471,6 +491,8 @@ class GameScene: SKScene {
             livesImages[1].texture = SKTexture(imageNamed: "sliceLifeGone")
             livesImages[2].texture = SKTexture(imageNamed: "sliceLifeGone")
         }
+        
+        addChild(gameOver)
     }
     
     func subtractLife() {

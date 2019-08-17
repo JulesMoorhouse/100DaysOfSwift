@@ -195,6 +195,6 @@
 - Challenge, aded further beacons and a circle for range
 
 **Day 77 / 78 / 79**
-- Topics: SKShapeNode, touchesEnded(), AVAudioPlayer, and more.
+- Topics: SKShapeNode, touchesEnded(), AVAudioPlayer, CaseIterable, removeFirst() and more.
 - Folder: P23 SwiftyNinja
-- Challenge, 
+- Challenge, included in P23 SwiftyNinja, add game over etc
