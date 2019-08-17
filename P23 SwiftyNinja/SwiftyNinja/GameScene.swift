@@ -13,9 +13,15 @@ import SpriteKit
 enum ForceBomb {
     case never, always, random
 }
-
 enum SequenceType: CaseIterable {
     case oneNoBomb, one, twoWithOneBomb, two, three, four, chain, fastChain
+}
+
+enum NodeNames: String {
+    case Enemy = "enemy"
+    case Bomb = "bomb"
+    case BombContainer = "bombContainer"
+    case Empty = ""
 }
 
 class GameScene: SKScene {
@@ -119,13 +125,13 @@ class GameScene: SKScene {
         let nodesAtPoint = nodes(at: location)
         
         for case let node as SKSpriteNode in nodesAtPoint {
-            if node.name == "enemy" {
+            if node.name == NodeNames.Enemy.rawValue {
                 // destroy the penguin
                 if let emitter = SKEmitterNode(fileNamed: "sliceHitEnemy") {
                     emitter.position = node.position
                     addChild(emitter)
                 }
-                node.name = ""
+                node.name = NodeNames.Empty.rawValue
                 node.physicsBody?.isDynamic = false
                 
                 let scaleOut = SKAction.scale(to: 0.001, duration: 0.2)
@@ -142,7 +148,7 @@ class GameScene: SKScene {
                 }
                 
                 run(SKAction.playSoundFileNamed("whack.caf", waitForCompletion: false))
-            } else if node.name == "bomb" {
+            } else if node.name == NodeNames.Bomb.rawValue {
                 // destroy the bomb
                 guard let bombContainer = node.parent as? SKSpriteNode else { continue }
                 
@@ -151,7 +157,7 @@ class GameScene: SKScene {
                     addChild(emitter)
                 }
                 
-                node.name = ""
+                node.name = NodeNames.Empty.rawValue
                 bombContainer.physicsBody?.isDynamic = false
                 
                 let scaleOut = SKAction.scale(to: 0.001, duration: 0.2)
@@ -200,14 +206,14 @@ class GameScene: SKScene {
                 if node.position.y < -140 {
                     node.removeAllActions()
                     
-                    if node.name == "enemy" {
-                        node.name = ""
+                    if node.name == NodeNames.Enemy.rawValue {
+                        node.name = NodeNames.Empty.rawValue
                         subtractLife()
                         
                         node.removeFromParent()
                         activeEnemies.remove(at: index)
-                    } else if node.name == "bombContainer" {
-                        node.name = ""
+                    } else if node.name == NodeNames.BombContainer.rawValue {
+                        node.name = NodeNames.Empty.rawValue
                         node.removeFromParent()
                         activeEnemies.remove(at: index)
                     }
@@ -227,7 +233,7 @@ class GameScene: SKScene {
         var bombCount = 0
         
         for node in activeEnemies {
-            if node.name == "bombContainer" {
+            if node.name == NodeNames.BombContainer.rawValue {
                 bombCount += 1
                 break
             }
@@ -325,10 +331,10 @@ class GameScene: SKScene {
         if enemyType == 0 {
             enemy = SKSpriteNode()
             enemy.zPosition = 1
-            enemy.name = "bombContainer"
+            enemy.name = NodeNames.BombContainer.rawValue
             
             let bombImage = SKSpriteNode(imageNamed: "sliceBomb")
-            bombImage.name = "bomb"
+            bombImage.name = NodeNames.Bomb.rawValue
             enemy.addChild(bombImage)
             
             if bombSoundEffect != nil {
@@ -350,7 +356,7 @@ class GameScene: SKScene {
         } else {
             enemy = SKSpriteNode(imageNamed: "penguin")
             run(SKAction.playSoundFileNamed("launch.caf", waitForCompletion: false))
-            enemy.name = "enemy"
+            enemy.name = NodeNames.Enemy.rawValue
         }
         
         let randomPosition = CGPoint(x: Int.random(in: enemyMinXPosition...enemyMaxXPosition), y: enemyStartYPosition)
