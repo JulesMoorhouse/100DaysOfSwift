@@ -197,7 +197,8 @@
 **Day 77 / 78 / 79**
 - Topics: SKShapeNode, touchesEnded(), AVAudioPlayer, CaseIterable, removeFirst() and more.
 - Folder: P23 SwiftyNinja
-- Challenge, included in P23 SwiftyNinja, add game over etc
+- Folder: P23X SwiftyNinja (based on P23 SwiftyNinja)
+- Challenge, add game over, moved numbers, strings into enums and constants etc
 
 **Day 80 /81**
 - Topics: String subscripts, contains(where:), NSAttributedString, and more.
