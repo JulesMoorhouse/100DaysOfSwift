@@ -202,5 +202,7 @@
 
 **Day 80 /81**
 - Topics: String subscripts, contains(where:), NSAttributedString, and more.
-- Folder: P24 SwiftStrings
+- Folder: P24 SwiftStrings.playground
+- Folder: P24X SwiftStrings.playground
+- Challenge to write from string extensions
 
