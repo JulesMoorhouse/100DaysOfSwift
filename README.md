@@ -193,3 +193,8 @@
 - Folder: P22 DetectABeacon
 - Folder: P22X DetectABeacon (based on P22 DetectABeacon)
 - Challenge, aded further beacons and a circle for range
+
+**Day 77 / 78 / 79**
+- Topics: SKShapeNode, touchesEnded(), AVAudioPlayer, and more.
+- Folder: P23 SwiftyNinja
+- Challenge, 
