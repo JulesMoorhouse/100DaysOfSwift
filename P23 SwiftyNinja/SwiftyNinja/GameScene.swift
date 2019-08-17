@@ -7,6 +7,7 @@
 //
 
 import AVFoundation
+import GameplayKit
 import SpriteKit
 
 enum ForceBomb {
@@ -16,7 +17,6 @@ enum ForceBomb {
 enum SequenceType: CaseIterable {
     case oneNoBomb, one, twoWithOneBomb, two, three, four, chain, fastChain
 }
-
 
 class GameScene: SKScene {
     var gameScore: SKLabelNode!
@@ -31,18 +31,27 @@ class GameScene: SKScene {
     var lives = 3
     
     var activeSliceBG: SKShapeNode!
-    var activeSliceFG: SKShapeNode!    
+    var activeSliceFG: SKShapeNode!
+    
     var activeSlicePoints = [CGPoint]()
-
-    var activeEnemies = [SKSpriteNode]()
     var isSwooshSoundActive = false
+    var activeEnemies = [SKSpriteNode]()
     var bombSoundEffect: AVAudioPlayer?
     
-    var popupTime = 0.9 // time between last enemy being destroyed and new one created
-    var sequence = [SequenceType]() // which enemy is going to be created
-    var sequencePosition = 0 // where we are in game, relative to sequence array
-    var chainDelay = 3.0 // how long to wait to before creating a new enemy when the sequence type is chained or fast chained
-    var nextSequenceQueued = true // so we know when all enemies are destoryed and we know to create more
+    // time between last enemy being destroyed and new one created
+    var popupTime = 0.9
+    
+    // which enemy is going to be created
+    var sequence = [SequenceType]()
+    
+    // where we are in game, relative to sequence array
+    var sequencePosition = 0
+    
+    // how long to wait to before creating a new enemy when the sequence type is chained or fast chained
+    var chainDelay = 3.0
+    
+    // so we know when all enemies are destoryed and we know to create more
+    var nextSequenceQueued = true
     
     var isGameEnded = false
     
@@ -72,8 +81,11 @@ class GameScene: SKScene {
         background.zPosition = -1
         addChild(background)
         
-        physicsWorld.gravity = CGVector(dx: 0, dy: -6) // less gravity
-        physicsWorld.speed = 0.85 // slower
+        // less gravity
+        physicsWorld.gravity = CGVector(dx: 0, dy: -6)
+        
+        // slower
+        physicsWorld.speed = 0.85
         
         createScore()
         createLives()
@@ -84,8 +96,8 @@ class GameScene: SKScene {
         
         for _ in 0...1000 {
             if let nextSequence = SequenceType.allCases.randomElement() {
-             sequence.append(nextSequence)
-		}
+                sequence.append(nextSequence)
+            }
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in self?.tossEnemies() }
@@ -132,7 +144,7 @@ class GameScene: SKScene {
                 run(SKAction.playSoundFileNamed("whack.caf", waitForCompletion: false))
             } else if node.name == "bomb" {
                 // destroy the bomb
-                guard let bombContainer = node.parent as? SKSpriteNode else  { continue }
+                guard let bombContainer = node.parent as? SKSpriteNode else { continue }
                 
                 if let emitter = SKEmitterNode(fileNamed: "sliceHitBomb") {
                     emitter.position = bombContainer.position
@@ -257,7 +269,7 @@ class GameScene: SKScene {
         activeSliceBG.strokeColor = UIColor(red: 1, green: 0.9, blue: 0, alpha: 1)
         activeSliceBG.lineWidth = 9
         
-        activeSliceFG.strokeColor = UIColor.white
+        activeSliceFG.strokeColor = .white
         activeSliceFG.lineWidth = 5
         
         addChild(activeSliceBG)
@@ -347,25 +359,36 @@ class GameScene: SKScene {
         let randomAngularVelocity = CGFloat.random(in: minAngularVelocity...maxAngularVelocity)
         var randomXVelocity: Int
         
-        if randomPosition.x < firstXBoundary { // way to the left of our screen
+        // way to the left of our screen
+        if randomPosition.x < firstXBoundary {
             randomXVelocity = Int.random(in: fastMinXVelocity...fastMaxXVelocity)
             
-        } else if randomPosition.x < secondXBoundary { // left side of out screen, not extreme left
-            randomXVelocity = Int.random(in: slowMinXVelocity...slowMaxXVelocity) // move to the right gently
+            // left side of out screen, not extreme left
+        } else if randomPosition.x < secondXBoundary {
+            // move to the right gently
+            randomXVelocity = Int.random(in: slowMinXVelocity...slowMaxXVelocity)
             
-        } else if randomPosition.x < thirdXBoundary { // right part of our screen, but not extreme right
-            randomXVelocity = -Int.random(in: slowMinXVelocity...slowMaxXVelocity) // move to the left
+            // right part of our screen, but not extreme right
+        } else if randomPosition.x < thirdXBoundary {
+            // move to the left
+            randomXVelocity = -Int.random(in: slowMinXVelocity...slowMaxXVelocity)
             
         } else {
-            randomXVelocity = -Int.random(in: fastMinXVelocity...fastMaxXVelocity) // if it's the far right of the screen, move to the left very quickly
+            // if it's the far right of the screen, move to the left very quickly
+            randomXVelocity = -Int.random(in: fastMinXVelocity...fastMaxXVelocity)
         }
         
-        let randomYVelocity = Int.random(in: minYVelocity...maxYVelocity)
+        var randomYVelocity = Int.random(in: minYVelocity...maxYVelocity)
+        
+        randomXVelocity *= velocityAccelerator
+        randomYVelocity *= velocityAccelerator
         
         enemy.physicsBody = SKPhysicsBody(circleOfRadius: 64)
         enemy.physicsBody?.velocity = CGVector(dx: randomXVelocity, dy: randomYVelocity)
         enemy.physicsBody?.angularVelocity = randomAngularVelocity
-        enemy.physicsBody?.collisionBitMask = 0 // bounce off nothing in the game
+        
+        // bounce off nothing in the game
+        enemy.physicsBody?.collisionBitMask = 0
         
         addChild(enemy)
         activeEnemies.append(enemy)
@@ -429,7 +452,7 @@ class GameScene: SKScene {
     
     func endGame(triggeredByBomb: Bool) {
         guard isGameEnded == false else { return }
-
+        
         isGameEnded = true
         physicsWorld.speed = 0
         isUserInteractionEnabled = false
@@ -453,7 +476,7 @@ class GameScene: SKScene {
         
         if lives == 2 {
             life = livesImages[0]
-        } else if lives  == 1 {
+        } else if lives == 1 {
             life = livesImages[1]
         } else {
             life = livesImages[2]
