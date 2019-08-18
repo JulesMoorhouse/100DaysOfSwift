@@ -219,3 +219,4 @@
 **Day 85 / 86**
 - Topics: Core Motion, accelerometer, how to load a game level from a file and how to create custom physics bitmasks, while also getting some practice with fatalError(), SKAction, and more.
 - Folder: P26 MarbleMaze
+- Folder: P26X MarbleMaze (based on P26 MarbleMaze)
