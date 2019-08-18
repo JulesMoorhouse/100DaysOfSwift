@@ -33,11 +33,20 @@ enum NodeNames: String {
     // case empty = " "
 }
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     var player: SKSpriteNode!
     var lastTouchedPosition: CGPoint?
     
     var motionManager: CMMotionManager?
+    var isGameOver = false
+    
+    var scoreLabel: SKLabelNode!
+    
+    var score = 0 {
+        didSet {
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
     
     override func didMove(to view: SKView) {
         let background = SKSpriteNode(imageNamed: "background")
@@ -46,10 +55,19 @@ class GameScene: SKScene {
         background.zPosition = -1
         addChild(background)
         
+        
+        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+        scoreLabel.horizontalAlignmentMode = .left
+        scoreLabel.position = CGPoint(x: 16, y: 16)
+        scoreLabel.zPosition = 2
+        addChild(scoreLabel)
+        score = 0
+        
         loadLevel()
         createPlayer()
         
         physicsWorld.gravity = .zero
+        physicsWorld.contactDelegate = self
         
         motionManager = CMMotionManager()
         motionManager?.startAccelerometerUpdates()
@@ -71,7 +89,22 @@ class GameScene: SKScene {
         lastTouchedPosition = nil
     }
     
+    func didBegin(_ contact: SKPhysicsContact) {
+        guard let nodeA = contact.bodyA.node else { return }
+        guard let nodeB = contact.bodyB.node else { return }
+        
+        if nodeA == player {
+            playerCollided(with: nodeB)
+        } else if nodeB == player {
+            playerCollided(with: nodeA)
+        }
+        //https://www.hackingwithswift.com/read/26/4/contacting-but-not-colliding
+        // 4:26
+    }
+    
     override func update(_ currentTime: TimeInterval) {
+        guard isGameOver == false else { return }
+        
         #if targetEnvironment(simulator)
         if let lastTouchedPosition = lastTouchedPosition {
             let diff = CGPoint(x: lastTouchedPosition.x - player.position.x, y: lastTouchedPosition.y - player.position.y)
@@ -190,5 +223,30 @@ class GameScene: SKScene {
         player.physicsBody?.collisionBitMask = CollisionTypes.wall.rawValue
         
         addChild(player)
+    }
+    
+    func playerCollided(with node: SKNode) {
+        if node.name == NodeNames.vortex.rawValue {
+            // stop player rolling around like a ball so we can suck it into the vortex
+            player.physicsBody?.isDynamic = false
+            isGameOver = true
+            score -= 1
+            
+            // move ball over vortex
+            let move = SKAction.move(to: node.position, duration: 0.25)
+            let scale = SKAction.scale(by: 0.0001, duration: 0.25)
+            let remove = SKAction.removeFromParent()
+            let sequence = SKAction.sequence([move, scale, remove])
+            
+            player.run(sequence) { [weak self] in
+                self?.createPlayer()
+                self?.isGameOver = false
+            }
+        } else if node.name == NodeNames.star.rawValue {
+            node.removeFromParent()
+            score += 1
+        } else if node.name == NodeNames.finish.rawValue {
+            // next level
+        }
     }
 }
