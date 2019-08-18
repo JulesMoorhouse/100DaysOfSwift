@@ -209,3 +209,7 @@
 **Day 82**
 - Milestone project challenge 22 to 24
 - Folder: X08 Extensions playground
+
+**Day 83 to 84**
+- Topics: Peer to peer networking, while also getting some practice with collection views, GCD, and more.
+- Folder: P25 SelfieShare
