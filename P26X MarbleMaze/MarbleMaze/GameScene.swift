@@ -251,6 +251,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             score += 1
         } else if node.name == NodeNames.finish.rawValue {
             currentLevel += 1
+            // todo remove all existing objectsS
             player.removeFromParent()
             loadLevel(number: currentLevel)
             createPlayer()
