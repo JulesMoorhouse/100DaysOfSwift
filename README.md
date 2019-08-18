@@ -213,3 +213,5 @@
 **Day 83 to 84**
 - Topics: Peer to peer networking, while also getting some practice with collection views, GCD, and more.
 - Folder: P25 SelfieShare
+- Folder: P25X SelfieShare (based on P25 SelfieShare)
+- Challenge to add some UIAlerts for status, also send text messages and produce a list of users
