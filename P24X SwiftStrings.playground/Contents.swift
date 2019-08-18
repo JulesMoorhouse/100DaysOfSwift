@@ -1,7 +1,5 @@
 import UIKit
 
-var str = "Hello, playground"
-
 // Challenge step 1
 
 extension String {

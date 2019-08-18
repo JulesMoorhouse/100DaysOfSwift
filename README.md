@@ -206,3 +206,6 @@
 - Folder: P24X SwiftStrings.playground
 - Challenge to write from string extensions
 
+**Day 82**
+- Milestone project challenge 22 to 24
+- Folder: X08 Extensions playgound
