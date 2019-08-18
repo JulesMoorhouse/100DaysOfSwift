@@ -210,8 +210,12 @@
 - Milestone project challenge 22 to 24
 - Folder: X08 Extensions playground
 
-**Day 83 to 84**
+**Day 83 / 84**
 - Topics: Peer to peer networking, while also getting some practice with collection views, GCD, and more.
 - Folder: P25 SelfieShare
 - Folder: P25X SelfieShare (based on P25 SelfieShare)
 - Challenge to add some UIAlerts for status, also send text messages and produce a list of users
+
+**Day 85 / 86**
+- Topics: Core Motion, accelerometer, how to load a game level from a file and how to create custom physics bitmasks, while also getting some practice with fatalError(), SKAction, and more.
+- Folder: P26 MarbleMaze
