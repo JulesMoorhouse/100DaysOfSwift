@@ -14,6 +14,7 @@ enum LetterType: Character {
     case vortex = "v"
     case star = "s"
     case finishPoint = "f"
+    case teleport = "t"
     case empty = " "
 }
 
@@ -23,6 +24,7 @@ enum CollisionTypes: UInt32 {
     case star = 4
     case vortex = 8
     case finish = 16
+    case teleport = 32
 }
 
 enum NodeNames: String {
@@ -30,6 +32,7 @@ enum NodeNames: String {
     case vortex
     case star
     case finish
+    case teleport
     // case empty = " "
 }
 
@@ -40,6 +43,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var motionManager: CMMotionManager?
     var isGameOver = false
     var currentLevel = 1
+    var lastTeleport: SKNode!
     
     var scoreLabel: SKLabelNode!
     
@@ -50,12 +54,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func didMove(to view: SKView) {
+        print("didMove")
         let background = SKSpriteNode(imageNamed: "background")
         background.position = CGPoint(x: 512, y: 384)
         background.blendMode = .replace
         background.zPosition = -1
         addChild(background)
-        
         
         scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
         scoreLabel.horizontalAlignmentMode = .left
@@ -75,22 +79,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touchesBegan")
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
         lastTouchedPosition = location
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touchesMoved")
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
         lastTouchedPosition = location
+        
+        let nodesAtPoint = nodes(at: location) // all nodes under finger
+        for case let node as SKSpriteNode in nodesAtPoint {
+            if node.name != NodeNames.teleport.rawValue {
+                lastTeleport = nil
+            }
+
+        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("touchesEnded")
         lastTouchedPosition = nil
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
+        print("didBegin")
         guard let nodeA = contact.bodyA.node else { return }
         guard let nodeB = contact.bodyB.node else { return }
         
@@ -99,11 +115,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         } else if nodeB == player {
             playerCollided(with: nodeA)
         }
-        //https://www.hackingwithswift.com/read/26/4/contacting-but-not-colliding
+        // https://www.hackingwithswift.com/read/26/4/contacting-but-not-colliding
         // 4:26
     }
     
     override func update(_ currentTime: TimeInterval) {
+        print("update")
         guard isGameOver == false else { return }
         
         #if targetEnvironment(simulator)
@@ -121,6 +138,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func loadNodeWall(_ position: CGPoint) {
+        print("loadNodeWall")
         let node = SKSpriteNode(imageNamed: "block")
         node.name = NodeNames.wall.rawValue
         node.position = position
@@ -136,6 +154,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func loadNodeVortex(_ position: CGPoint) {
+        print("loadNodeVortex")
         let node = SKSpriteNode(imageNamed: "vortex")
         node.name = NodeNames.vortex.rawValue
         node.position = position
@@ -158,7 +177,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func loadNodeObject(_ position: CGPoint, imageName: String, type: CollisionTypes, nodeName: NodeNames) {
+        print("loadNodeObject")
         let node = SKSpriteNode(imageNamed: imageName)
+        node.size = CGSize(width: 64, height: 64)
         node.name = nodeName.rawValue
         node.physicsBody = SKPhysicsBody(circleOfRadius: node.size.width / 2)
         node.physicsBody?.isDynamic = false
@@ -176,6 +197,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func loadLevel(number: Int) {
+        print("loadLevel")
         guard let levelURL = Bundle.main.url(forResource: "level\(number)", withExtension: "txt") else {
             fatalError("Could not find level1.txt in the app bundle.")
         }
@@ -199,9 +221,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                 } else if letter == LetterType.star.rawValue {
                     loadNodeObject(position, imageName: "star", type: .star, nodeName: .star)
+                    
                 } else if letter == LetterType.finishPoint.rawValue {
                     loadNodeObject(position, imageName: "finish", type: .finish, nodeName: .finish)
-
+                    
+                } else if letter == LetterType.teleport.rawValue {
+                    loadNodeObject(position, imageName: "target0", type: .teleport, nodeName: .teleport)
+                    
                 } else if letter == LetterType.empty.rawValue {
                     // this is an empty space - do nothing
                 } else {
@@ -212,6 +238,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createPlayer() {
+        print("createPlayer")
         player = SKSpriteNode(imageNamed: "player")
         player.position = CGPoint(x: 96, y: 672)
         player.zPosition = 1
@@ -231,6 +258,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func playerCollided(with node: SKNode) {
+        print("playerCollided")
         if node.name == NodeNames.vortex.rawValue {
             // stop player rolling around like a ball so we can suck it into the vortex
             player.physicsBody?.isDynamic = false
@@ -247,9 +275,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self?.createPlayer()
                 self?.isGameOver = false
             }
+            
         } else if node.name == NodeNames.star.rawValue {
             node.removeFromParent()
             score += 1
+            
+        } else if node.name == NodeNames.teleport.rawValue {
+            for child in children {
+                if child.name == NodeNames.teleport.rawValue, node != lastTeleport {
+                    if child.position.x != node.position.x && child.position.y != node.position.y {
+                        lastTeleport = child
+                        player.physicsBody?.isDynamic = false
+                        let move = SKAction.move(to: child.position, duration: 0)
+                        player.run(move)
+                        player.physicsBody?.isDynamic = true
+                        break
+                    }
+                }
+            }
         } else if node.name == NodeNames.finish.rawValue {
             currentLevel += 1
             
@@ -260,7 +303,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 addChild(gameOver)
             } else {
                 // Remove map objects
-                for child in self.children {
+                for child in children {
                     if child.name == NodeNames.wall.rawValue ||
                         child.name == NodeNames.vortex.rawValue ||
                         child.name == NodeNames.star.rawValue ||
@@ -268,7 +311,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         child.removeFromParent()
                     }
                 }
-
+                
                 player.removeFromParent()
                 loadLevel(number: currentLevel)
                 createPlayer()
