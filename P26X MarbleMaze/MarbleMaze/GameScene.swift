@@ -122,6 +122,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func loadNodeWall(_ position: CGPoint) {
         let node = SKSpriteNode(imageNamed: "block")
+        node.name = NodeNames.wall.rawValue
         node.position = position
         
         node.physicsBody = SKPhysicsBody(rectangleOf: node.size)
@@ -251,10 +252,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             score += 1
         } else if node.name == NodeNames.finish.rawValue {
             currentLevel += 1
-            // todo remove all existing objectsS
-            player.removeFromParent()
-            loadLevel(number: currentLevel)
-            createPlayer()
+            
+            if currentLevel > 3 {
+                let gameOver = SKSpriteNode(imageNamed: "game-over")
+                gameOver.position = CGPoint(x: 512, y: 384)
+                gameOver.zPosition = 1
+                addChild(gameOver)
+            } else {
+                // Remove map objects
+                for child in self.children {
+                    if child.name == NodeNames.wall.rawValue ||
+                        child.name == NodeNames.vortex.rawValue ||
+                        child.name == NodeNames.star.rawValue ||
+                        child.name == NodeNames.finish.rawValue {
+                        child.removeFromParent()
+                    }
+                }
+
+                player.removeFromParent()
+                loadLevel(number: currentLevel)
+                createPlayer()
+            }
         }
     }
 }
