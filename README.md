@@ -224,3 +224,4 @@
 **Day 88**
 - Topics: UIGraphicsImageRenderer, drawing fills and strokes, and insetting a CGRect, while also getting more practice with NSAttributedString and more.
 - Folder: P27 CoreGraphics
+- Folder: P27X CoreGraphics (based on P27 CoreGraphics)
