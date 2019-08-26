@@ -221,7 +221,7 @@
 - Folder: P26 MarbleMaze
 - Folder: P26X MarbleMaze (based on P26 MarbleMaze)
 
-**Day 88**
+**Day 88 / 89**
 - Topics: UIGraphicsImageRenderer, drawing fills and strokes, and insetting a CGRect, while also getting more practice with NSAttributedString and more.
 - Folder: P27 CoreGraphics
 - Folder: P27X CoreGraphics (based on P27 CoreGraphics) - emoji and word twin drawn.
