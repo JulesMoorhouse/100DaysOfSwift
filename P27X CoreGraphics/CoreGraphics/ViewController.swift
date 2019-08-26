@@ -15,18 +15,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        drawRectangle()
+        //drawRectangle()
+        drawWordTwin()
     }
 
     @IBAction func redrawTapped(_ sender: Any) {
         currentDrawType += 1
         
-        if currentDrawType > 5 {
+        if currentDrawType > 7 {
             currentDrawType = 0
         }
         
         switch currentDrawType {
-        case 0:
+        case 7:
             drawRectangle()
             
         case 1:
@@ -43,6 +44,12 @@ class ViewController: UIViewController {
             
         case 5:
             drawImagesAndText()
+            
+        case 6:
+            drawEmojis()
+            
+        case 0:
+            drawWordTwin()
             
         default:
             break
@@ -178,6 +185,68 @@ class ViewController: UIViewController {
             
             let mouse = UIImage(named: "mouse")
             mouse?.draw(at: CGPoint(x: 300, y: 150))
+        }
+        
+        imageView.image = image
+    }
+    
+    func drawEmojis() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        
+        let image = renderer.image { ctx in
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .center
+            
+            let attrs: [NSAttributedString.Key: Any] = [
+                .font: UIFont.systemFont(ofSize: 36),
+                .paragraphStyle: paragraphStyle
+            ]
+            
+            let string = "😀  ⭐️ ✭ ★ ⭐︎"
+            
+            let attributedString = NSAttributedString(string: string, attributes: attrs)
+            
+            attributedString.draw(with: CGRect(x: 32, y: 32, width: 448, height: 448), options: .usesLineFragmentOrigin, context: nil)
+        }
+        
+        imageView.image = image
+    }
+    
+    func drawWordTwin() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        
+        let blockLength = 25.0
+        
+        let image = renderer.image { ctx in
+            
+            // T
+            ctx.cgContext.move(to: CGPoint(x: blockLength, y: blockLength))
+            ctx.cgContext.addLine(to: CGPoint(x: blockLength * 2, y: blockLength))
+            ctx.cgContext.addLine(to: CGPoint(x: blockLength * 2, y: blockLength * 4))
+            ctx.cgContext.move(to: CGPoint(x: blockLength * 2, y: blockLength))
+            ctx.cgContext.addLine(to: CGPoint(x: blockLength * 3, y: blockLength))
+
+ 
+            // W
+            ctx.cgContext.move(to: CGPoint(x: blockLength * 4, y: blockLength))
+            ctx.cgContext.addLine(to: CGPoint(x: blockLength * 5, y: blockLength * 4))
+            ctx.cgContext.addLine(to: CGPoint(x: blockLength * 5.5, y: blockLength * 3))
+            ctx.cgContext.addLine(to: CGPoint(x: blockLength * 6, y: blockLength * 4))
+            ctx.cgContext.addLine(to: CGPoint(x: blockLength * 7, y: blockLength))
+
+            // I
+            ctx.cgContext.move(to: CGPoint(x: blockLength * 8, y: blockLength))
+            ctx.cgContext.addLine(to: CGPoint(x: blockLength * 8, y: blockLength * 4))
+
+            // N
+            ctx.cgContext.move(to: CGPoint(x: blockLength * 9, y: blockLength * 4))
+            ctx.cgContext.addLine(to: CGPoint(x: blockLength * 9, y: blockLength))
+            ctx.cgContext.addLine(to: CGPoint(x: blockLength * 11, y: blockLength * 4))
+            ctx.cgContext.addLine(to: CGPoint(x: blockLength * 11, y: blockLength))
+
+            ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
+            ctx.cgContext.setLineWidth(2) // 5 points inside and 5 outside
+            ctx.cgContext.strokePath()
         }
         
         imageView.image = image
