@@ -22,7 +22,31 @@ class DetailViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
         
         if let imageToLoad = selectedImage {
-            imageView.image = UIImage(named: imageToLoad)
+            let storm = UIImage(named: imageToLoad)
+            
+            let renderer = UIGraphicsImageRenderer(size: CGSize(width: storm!.size.width, height: storm!.size.height))
+            
+            let image = renderer.image { ctx in
+
+                storm?.draw(at: CGPoint(x: 0, y: 0))
+                
+                let paragraphStyle = NSMutableParagraphStyle()
+                paragraphStyle.alignment = .center
+                
+                let attrs: [NSAttributedString.Key: Any] = [
+                    .font: UIFont.systemFont(ofSize: 36),
+                    .paragraphStyle: paragraphStyle
+                ]
+                
+                let string = "From Storm Viewer"
+                
+                let attributedString = NSAttributedString(string: string, attributes: attrs)
+                
+                attributedString.draw(with: CGRect(x: 0, y: 100, width: storm!.size.width, height: storm!.size.height - 100), options: .usesLineFragmentOrigin, context: nil)
+
+                
+            }
+            imageView.image = image
         }
     }
     
