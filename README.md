@@ -226,3 +226,7 @@
 - Folder: P27 CoreGraphics
 - Folder: P27X CoreGraphics (based on P27 CoreGraphics) - emoji and word twin drawn.
 - Folder: P27X StormViewer (based on P12X StormViewer aka Project 1) - draw text on image.
+
+**Day 90**
+- Milestone project challenge 25 to 27
+
