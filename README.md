@@ -216,7 +216,11 @@
 - Folder: P25X SelfieShare (based on P25 SelfieShare)
 - Challenge to add some UIAlerts for status, also send text messages and produce a list of users
 
-**Day 85 / 86**
+**Day 85 / 86 / 87**
 - Topics: Core Motion, accelerometer, how to load a game level from a file and how to create custom physics bitmasks, while also getting some practice with fatalError(), SKAction, and more.
 - Folder: P26 MarbleMaze
 - Folder: P26X MarbleMaze (based on P26 MarbleMaze)
+
+**Day 88**
+- Topics: UIGraphicsImageRenderer, drawing fills and strokes, and insetting a CGRect, while also getting more practice with NSAttributedString and more.
+- Folder: P27 CoreGraphics
