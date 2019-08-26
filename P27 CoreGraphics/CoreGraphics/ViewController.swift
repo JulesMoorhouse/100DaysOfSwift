@@ -35,6 +35,12 @@ class ViewController: UIViewController {
         case 2:
             drawCheckerBoard()
             
+        case 3:
+            drawRotatedSquares()
+            
+        case 4:
+            drawLines()
+            
         default:
             break
         }
@@ -88,6 +94,62 @@ class ViewController: UIViewController {
                 }
             }
             
+        }
+        
+        imageView.image = image
+    }
+    
+    func drawRotatedSquares() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        
+        let image = renderer.image { ctx in
+            ctx.cgContext.setFillColor(UIColor.black.cgColor)
+        
+            // rotate around the center rather than the top left corner
+            ctx.cgContext.translateBy(x: 256, y: 256)
+            
+            // how much we want to rotate and how many times
+            let rotations = 16
+            let amount = Double.pi / Double(rotations)
+            
+            for _ in 0 ..< rotations {
+                ctx.cgContext.rotate(by: CGFloat(amount))
+                // back and left by 128 because we're drawing from the center
+                ctx.cgContext.addRect(CGRect(x: -128, y: -128, width: 256, height: 256))
+            }
+            
+            ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
+            ctx.cgContext.strokePath()
+        }
+        
+        imageView.image = image
+    }
+    
+    func drawLines() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        
+        let image = renderer.image { ctx in
+            // rotate around the center rather than the top left corner
+            ctx.cgContext.translateBy(x: 256, y: 256)
+            
+            var first = true
+            var length: CGFloat = 256
+            
+            for _ in 0 ..< 256 {
+                ctx.cgContext.rotate(by: .pi / 2) // 90 degress
+                
+                if first {
+                    ctx.cgContext.move(to: CGPoint(x: length, y: 50))
+                    first = false
+                } else {
+                    ctx.cgContext.addLine(to: CGPoint(x: length, y: 50))
+                }
+                
+                length *= 0.99
+            }
+            
+            ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
+            ctx.cgContext.strokePath()
         }
         
         imageView.image = image
