@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		88E459862313E2D9009B6C58 /* CoreGraphics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreGraphics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88E459862313E2D9009B6C58 /* CoreGraphizs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreGraphizs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88E459892313E2D9009B6C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88E4598B2313E2D9009B6C58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		88E4598E2313E2D9009B6C58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		88E459872313E2D9009B6C58 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				88E459862313E2D9009B6C58 /* CoreGraphics.app */,
+				88E459862313E2D9009B6C58 /* CoreGraphizs.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,9 +67,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		88E459852313E2D9009B6C58 /* CoreGraphics */ = {
+		88E459852313E2D9009B6C58 /* CoreGraphizs */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 88E459982313E2DB009B6C58 /* Build configuration list for PBXNativeTarget "CoreGraphics" */;
+			buildConfigurationList = 88E459982313E2DB009B6C58 /* Build configuration list for PBXNativeTarget "CoreGraphizs" */;
 			buildPhases = (
 				88E459822313E2D9009B6C58 /* Sources */,
 				88E459832313E2D9009B6C58 /* Frameworks */,
@@ -79,9 +79,9 @@
 			);
 			dependencies = (
 			);
-			name = CoreGraphics;
+			name = CoreGraphizs;
 			productName = CoreGraphics;
-			productReference = 88E459862313E2D9009B6C58 /* CoreGraphics.app */;
+			productReference = 88E459862313E2D9009B6C58 /* CoreGraphizs.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,7 +99,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 88E459812313E2D9009B6C58 /* Build configuration list for PBXProject "CoreGraphics" */;
+			buildConfigurationList = 88E459812313E2D9009B6C58 /* Build configuration list for PBXProject "CoreGraphizs" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,7 +112,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				88E459852313E2D9009B6C58 /* CoreGraphics */,
+				88E459852313E2D9009B6C58 /* CoreGraphizs */,
 			);
 		};
 /* End PBXProject section */
@@ -317,7 +317,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		88E459812313E2D9009B6C58 /* Build configuration list for PBXProject "CoreGraphics" */ = {
+		88E459812313E2D9009B6C58 /* Build configuration list for PBXProject "CoreGraphizs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				88E459962313E2DB009B6C58 /* Debug */,
@@ -326,7 +326,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		88E459982313E2DB009B6C58 /* Build configuration list for PBXNativeTarget "CoreGraphics" */ = {
+		88E459982313E2DB009B6C58 /* Build configuration list for PBXNativeTarget "CoreGraphizs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				88E459992313E2DB009B6C58 /* Debug */,
