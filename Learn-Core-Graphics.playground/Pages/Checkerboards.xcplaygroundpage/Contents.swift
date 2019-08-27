@@ -11,10 +11,10 @@ let renderer = UIGraphicsImageRenderer(bounds: rect)
 let rendered = renderer.image { ctx in
     UIColor.black.setFill()
 
-    let size = 20
+    let size = 100
 
-    for row in 0 ..< 5 {
-        for col in 0 ..< 5 {
+    for row in 0 ..< 10 {
+        for col in 0 ..< 10 {
             if (row + col) % 2 == 0 {
                 ctx.cgContext.fill(CGRect(x: col * size, y: row * size, width: size, height: size))
             }

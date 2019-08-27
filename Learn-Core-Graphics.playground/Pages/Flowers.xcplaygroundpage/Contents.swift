@@ -11,8 +11,21 @@ let renderer = UIGraphicsImageRenderer(bounds: rect)
 let rendered = renderer.image { ctx in
 	// "This doesn't seem right…" – Designer
     UIColor.red.setFill()
-    let circle1 = CGRect(x: 0, y: 0, width: 500, height: 500)
+    let circle1 = CGRect(x: 50, y: 50, width: 500, height: 500)
     ctx.cgContext.fillEllipse(in: circle1)
+    
+    let circle2 = CGRect(x: 450, y: 50, width: 500, height: 500)
+    ctx.cgContext.fillEllipse(in: circle2)
+    
+    let circle3 = CGRect(x: 50, y: 450, width: 500, height: 500)
+    ctx.cgContext.fillEllipse(in: circle3)
+    
+    let circle4 = CGRect(x: 450, y: 450, width: 500, height: 500)
+    ctx.cgContext.fillEllipse(in: circle4)
+    
+    UIColor.black.setFill()
+    let circle5 = CGRect(x: 400, y: 400, width: 200, height: 200)
+    ctx.cgContext.fillEllipse(in: circle5)
 }
 
 showOutput(rendered)

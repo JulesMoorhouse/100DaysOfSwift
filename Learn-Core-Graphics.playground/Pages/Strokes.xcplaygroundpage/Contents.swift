@@ -21,7 +21,21 @@ let rendered = renderer.image { ctx in
     ctx.cgContext.addEllipse(in: bigCircle)
     ctx.cgContext.drawPath(using: .fillStroke)
 
-    // Add your code here
+    ctx.cgContext.setLineWidth(10)
+
+    let northCircle = CGRect(x: 400, y: 100, width: 200, height: 200)
+    ctx.cgContext.addEllipse(in: northCircle)
+
+    let eastCircle = CGRect(x: 100, y: 400, width: 200, height: 200)
+    ctx.cgContext.addEllipse(in: eastCircle)
+    
+    let westCircle = CGRect(x: 700, y: 400, width: 200, height: 200)
+    ctx.cgContext.addEllipse(in: westCircle)
+
+    let southCircle = CGRect(x: 400, y: 700, width: 200, height: 200)
+    ctx.cgContext.addEllipse(in: southCircle)
+    
+    ctx.cgContext.drawPath(using: .fillStroke)
 }
 
 showOutput(rendered)

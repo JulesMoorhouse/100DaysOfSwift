@@ -13,8 +13,21 @@ let rendered = renderer.image { ctx in
     UIColor.yellow.setFill()
     ctx.cgContext.setLineWidth(10)
 
-    let face = CGRect(x: 0, y: 0, width: 800, height: 800)
+    let face = CGRect(x: 100, y: 100, width: 800, height: 800)
     ctx.cgContext.addEllipse(in: face)
+    ctx.cgContext.drawPath(using: .fillStroke)
+    
+    UIColor.brown.setFill()
+    let mouth = CGRect(x: 350, y: 500, width: 300, height: 300)
+    ctx.cgContext.addEllipse(in: mouth)
+    ctx.cgContext.drawPath(using: .fillStroke)
+
+    UIColor.black.setFill()
+    let eyeLeft = CGRect(x: 250, y: 300, width: 150, height: 150)
+    ctx.cgContext.addEllipse(in: eyeLeft)
+
+    let eyeRight = CGRect(x: 600, y: 300, width: 150, height: 150)
+    ctx.cgContext.addEllipse(in: eyeRight)
     ctx.cgContext.drawPath(using: .fillStroke)
 }
 

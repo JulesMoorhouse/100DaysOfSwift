@@ -12,8 +12,13 @@ let renderer = UIGraphicsImageRenderer(bounds: rect)
 
 let rendered = renderer.image { ctx in
     // "I think these two look better!" – Designer
-    // UIColor.orange.setFill()
-    // ctx.cgContext.fill(CGRect(x: 0, y: 400, width: 1000, height: 200))
+
+    UIColor.yellow.setFill()
+    ctx.cgContext.fill(CGRect(x: 0, y: 0, width: 1000, height: 1000))
+
+    UIColor.orange.setFill()
+    ctx.cgContext.fill(CGRect(x: 0, y: 400, width: 1000, height: 200))
+    ctx.cgContext.fill(CGRect(x: 400, y: 0, width: 200, height: 1000))
 }
 
 showOutput(rendered)
