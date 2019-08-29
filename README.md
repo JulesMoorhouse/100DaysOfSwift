@@ -234,4 +234,7 @@
 - Topics: Core Graphics Redux
 - File: Learn-Core-Graphics.playground
 
-
+**Day 92 / 93**
+- Topics: LocalAuthentication framework and the iOS keychain, get some practice with UITextView and more.
+- Folder: P28 SecretSwift
+- Challenge:
