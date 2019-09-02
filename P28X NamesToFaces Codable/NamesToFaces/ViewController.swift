@@ -16,17 +16,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
 
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
         
-        let defaults = UserDefaults.standard
-        
-        if let savedpeople = defaults.object(forKey: "people") as? Data {
-            let jsonDecoder = JSONDecoder()
-            
-            do {
-                people = try jsonDecoder.decode([Person].self, from: savedpeople)
-            } catch {
-                print("Failed to load people.")
-            }
-        }
+        loadPeople()
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -122,6 +112,20 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
             defaults.set(savedDate, forKey: "people")
         } else {
             print("Failed to save people")
+        }
+    }
+    
+    func loadPeople() {
+        let defaults = UserDefaults.standard
+        
+        if let savedpeople = defaults.object(forKey: "people") as? Data {
+            let jsonDecoder = JSONDecoder()
+            
+            do {
+                people = try jsonDecoder.decode([Person].self, from: savedpeople)
+            } catch {
+                print("Failed to load people.")
+            }
         }
     }
 }
