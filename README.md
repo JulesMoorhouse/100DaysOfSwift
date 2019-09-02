@@ -237,4 +237,6 @@
 **Day 92 / 93**
 - Topics: LocalAuthentication framework and the iOS keychain, get some practice with UITextView and more.
 - Folder: P28 SecretSwift
-- Challenge:
+- Folder: P28X SecretSwift (based on P28 SecretSwift)
+- Folder: P28X (based on P12B NamesToFaces)
+- Challenge: Add a unlock / done button, add a simple password fallback feature
