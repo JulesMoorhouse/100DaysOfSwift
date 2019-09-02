@@ -14,6 +14,8 @@
 		883C5B5B22F9A0030040F91B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883C5B5922F9A0030040F91B /* LaunchScreen.storyboard */; };
 		883C5B6322F9A1C30040F91B /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C5B6222F9A1C30040F91B /* PersonCell.swift */; };
 		883C5B6522F9AEE80040F91B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883C5B6422F9AEE80040F91B /* Person.swift */; };
+		8892C87C231DB7F2004F30C8 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892C87A231DB7F1004F30C8 /* KeychainWrapper.swift */; };
+		8892C87D231DB7F2004F30C8 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892C87B231DB7F1004F30C8 /* KeychainItemAccessibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		883C5B5C22F9A0030040F91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		883C5B6222F9A1C30040F91B /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		883C5B6422F9AEE80040F91B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		8892C87A231DB7F1004F30C8 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = "../../P28X SecretSwift/SecretSwift/KeychainWrapper.swift"; sourceTree = "<group>"; };
+		8892C87B231DB7F1004F30C8 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = "../../P28X SecretSwift/SecretSwift/KeychainItemAccessibility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				883C5B6222F9A1C30040F91B /* PersonCell.swift */,
 				883C5B5722F9A0030040F91B /* Assets.xcassets */,
 				883C5B5922F9A0030040F91B /* LaunchScreen.storyboard */,
+				8892C87B231DB7F1004F30C8 /* KeychainItemAccessibility.swift */,
+				8892C87A231DB7F1004F30C8 /* KeychainWrapper.swift */,
 				883C5B5C22F9A0030040F91B /* Info.plist */,
 			);
 			path = NamesToFaces;
@@ -145,6 +151,8 @@
 				883C5B5322F9A0010040F91B /* ViewController.swift in Sources */,
 				883C5B6522F9AEE80040F91B /* Person.swift in Sources */,
 				883C5B5122F9A0010040F91B /* AppDelegate.swift in Sources */,
+				8892C87C231DB7F2004F30C8 /* KeychainWrapper.swift in Sources */,
+				8892C87D231DB7F2004F30C8 /* KeychainItemAccessibility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
