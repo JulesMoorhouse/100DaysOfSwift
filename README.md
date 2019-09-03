@@ -241,3 +241,7 @@
 - Folder: P28X NamesToFaces Codable (based on P12B NamesToFaces Codable)
 - Challenge: P28X SecretSwift + P28X NamesToFaces Codable - Add a unlock / done button, add a simple password fallback feature
 
+**Day 94 / 95 / 96**
+- Topics: How to generate a scene dynamically, how to connect SpriteKit and UIKit, and more.
+- Folder: P29 ExplodingMonkeys
+
