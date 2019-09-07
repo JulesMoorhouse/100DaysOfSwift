@@ -24,12 +24,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var player2: SKSpriteNode!
     var banana: SKSpriteNode!
     var rainParticles: SKEmitterNode!
+    var gameOver: SKSpriteNode!
     
     var currentPlayer = 1
     
     var windDirection: Int = -4
     var windSpeed: CGFloat = 0.85
-    
+        
     override func didMove(to view: SKView) {
         backgroundColor = UIColor(hue: 0.669, saturation: 0.99, brightness: 0.67, alpha: 1)
         createBuildings()
@@ -46,8 +47,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         addChild(rainParticles)
         
+        gameOver = SKSpriteNode(imageNamed: "game-over")
+        gameOver.position = CGPoint(x: 512, y: 384)
+        gameOver.zPosition = 50
+        
         increaseDifficulty(delayAmount: 0)
-
+        
         physicsWorld.contactDelegate = self
     }
     
@@ -214,6 +219,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         banana.removeFromParent()
         banana = nil
         
+        if currentPlayer == 1 {
+            viewController?.score.p1 += 10
+        } else {
+            viewController?.score.p2 += 10
+        }
+        
         changePlayer()
     }
     
@@ -226,19 +237,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.removeFromParent()
         banana.removeFromParent()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            let newGame = GameScene(size: self.size)
-            newGame.viewController = self.viewController
-            self.viewController?.currentGame = newGame
-            
-            self.changePlayer()
-            newGame.currentPlayer = self.currentPlayer
-            
-            let transition = SKTransition.doorway(withDuration: 1.5)
-            self.view?.presentScene(newGame, transition: transition)
+        if (self.viewController?.gameRound ?? 0) >= 3 {
+            self.viewController?.launchButton.isEnabled = false
+            self.viewController?.velocitySlider.isEnabled = false
+            self.viewController?.angleSlider.isEnabled = false
+            addChild(gameOver)
+        } else {
+            self.viewController?.gameRound += 1
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                let newGame = GameScene(size: self.size)
+                newGame.viewController = self.viewController
+                self.viewController?.currentGame = newGame
+                
+                if self.currentPlayer == 1 {
+                    self.viewController?.score.p1 += 100
+                } else {
+                    self.viewController?.score.p2 += 100
+                }
+                
+                self.changePlayer()
+                newGame.currentPlayer = self.currentPlayer
+                
+                let transition = SKTransition.doorway(withDuration: 1.5)
+                self.view?.presentScene(newGame, transition: transition)
+            }
+            increaseDifficulty(delayAmount: 2)
         }
-        increaseDifficulty(delayAmount: 2)
-        
     }
     
     func changePlayer() {

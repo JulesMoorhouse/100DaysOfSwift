@@ -29,7 +29,9 @@ class GameViewController: UIViewController {
     
     var wind: WindItem = WindItem(speed: 0, direction: 0) {
         didSet {
-            windLabel.text = "Wind: Speed=\(wind.speed.rounded()) Direction=\(wind.direction)"
+            let directionForce: Int = abs(wind.direction) * 10
+            let direction: String = wind.direction > 0 ? "East" : "West"
+            windLabel.text = "Wind: Speed=\(wind.speed.rounded()) Direction=\(direction) \(directionForce)"
         }
     }
     
@@ -43,11 +45,13 @@ class GameViewController: UIViewController {
         }
     }
     
+    var gameRound: Int = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        score.p1 = 20
-        score.p2 = 40
+        score.p1 = 0
+        score.p2 = 0
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'

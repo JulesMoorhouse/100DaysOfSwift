@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "spark.png",
+      "filename" : "game-over.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "game-over@2x.png",
       "scale" : "2x"
     },
     {
