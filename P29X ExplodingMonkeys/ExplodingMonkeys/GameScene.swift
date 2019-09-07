@@ -46,7 +46,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         addChild(rainParticles)
         
-        increaseDifficulty()
+        increaseDifficulty(delayAmount: 0)
 
         physicsWorld.contactDelegate = self
     }
@@ -237,6 +237,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let transition = SKTransition.doorway(withDuration: 1.5)
             self.view?.presentScene(newGame, transition: transition)
         }
+        increaseDifficulty(delayAmount: 2)
+        
     }
     
     func changePlayer() {
@@ -246,17 +248,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             currentPlayer = 1
         }
         viewController?.activatePlayer(number: currentPlayer)
-        
-        increaseDifficulty()
     }
     
-    func increaseDifficulty() {
+    func increaseDifficulty(delayAmount: Double) {
         if viewController?.wind.direction != nil {
             windDirection = Int.random(in: -1...4)
             windSpeed += 0.5
         }
         
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delayAmount) {
             self.viewController?.wind.direction = self.windDirection
             self.viewController?.wind.speed = self.windSpeed
         }
