@@ -244,4 +244,5 @@
 **Day 94 / 95 / 96**
 - Topics: How to generate a scene dynamically, how to connect SpriteKit and UIKit, and more.
 - Folder: P29 ExplodingMonkeys
-
+- Folder: P29X ExplodingMonkeys (based on P29 ExplodingMonkeys)
+- Challenge to add wind and auto layout, scores and wind with increased difficulty (gravity / speed)

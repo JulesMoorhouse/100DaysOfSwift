@@ -19,9 +19,35 @@ class GameViewController: UIViewController {
     @IBOutlet var velocityLabel: UILabel!
     @IBOutlet var launchButton: UIButton!
     @IBOutlet var playerNumber: UILabel!
+    @IBOutlet var scoreLabel: UILabel!
+    @IBOutlet var windLabel: UILabel!
+
+    struct WindItem {
+        var speed: CGFloat
+        var direction: Int
+    }
+    
+    var wind: WindItem = WindItem(speed: 0, direction: 0) {
+        didSet {
+            windLabel.text = "Wind: Speed=\(wind.speed.rounded()) Direction=\(wind.direction)"
+        }
+    }
+    
+    struct ScoreItem {
+        var p1: Int
+        var p2: Int
+    }
+    var score: ScoreItem = ScoreItem(p1: 0, p2: 0) {
+        didSet {
+            scoreLabel.text = "Player 1 : \(score.p1) / Player 2 : \(score.p2)"
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        score.p1 = 20
+        score.p2 = 40
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'

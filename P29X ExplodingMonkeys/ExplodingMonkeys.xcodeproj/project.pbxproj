@@ -17,6 +17,7 @@
 		8892C8A7231EE638004F30C8 /* BuildingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8892C8A6231EE638004F30C8 /* BuildingNode.swift */; };
 		8892C8AA231EF72E004F30C8 /* hitPlayer.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8892C8A8231EF72E004F30C8 /* hitPlayer.sks */; };
 		8892C8AB231EF72E004F30C8 /* hitBuilding.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8892C8A9231EF72E004F30C8 /* hitBuilding.sks */; };
+		8892C8B12320541A004F30C8 /* Rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8892C8B02320541A004F30C8 /* Rain.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8892C8A6231EE638004F30C8 /* BuildingNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingNode.swift; sourceTree = "<group>"; };
 		8892C8A8231EF72E004F30C8 /* hitPlayer.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitPlayer.sks; sourceTree = "<group>"; };
 		8892C8A9231EF72E004F30C8 /* hitBuilding.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitBuilding.sks; sourceTree = "<group>"; };
+		8892C8B02320541A004F30C8 /* Rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Rain.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				8892C88C231EE449004F30C8 /* GameScene.sks */,
 				8892C8A6231EE638004F30C8 /* BuildingNode.swift */,
 				8892C890231EE449004F30C8 /* GameScene.swift */,
+				8892C8B02320541A004F30C8 /* Rain.sks */,
 				8892C892231EE449004F30C8 /* GameViewController.swift */,
 				8892C894231EE449004F30C8 /* Main.storyboard */,
 				8892C897231EE44D004F30C8 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			files = (
 				8892C896231EE449004F30C8 /* Main.storyboard in Resources */,
 				8892C88D231EE449004F30C8 /* GameScene.sks in Resources */,
+				8892C8B12320541A004F30C8 /* Rain.sks in Resources */,
 				8892C8AA231EF72E004F30C8 /* hitPlayer.sks in Resources */,
 				8892C898231EE44D004F30C8 /* Assets.xcassets in Resources */,
 				8892C89B231EE44D004F30C8 /* LaunchScreen.storyboard in Resources */,

@@ -13,6 +13,7 @@ enum CollisionTypes: UInt32 {
     case banana = 1
     case building = 2
     case player = 4
+    // case wind = 8
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
@@ -22,14 +23,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var player1: SKSpriteNode!
     var player2: SKSpriteNode!
     var banana: SKSpriteNode!
+    var rainParticles: SKEmitterNode!
     
     var currentPlayer = 1
+    
+    var windDirection: Int = -4
+    var windSpeed: CGFloat = 0.85
     
     override func didMove(to view: SKView) {
         backgroundColor = UIColor(hue: 0.669, saturation: 0.99, brightness: 0.67, alpha: 1)
         createBuildings()
         createPlayers()
         
+        rainParticles = SKEmitterNode(fileNamed: "Rain.sks")
+        rainParticles.position = CGPoint(x: size.width / 2, y: size.height)
+        rainParticles.name = "rainParticle"
+        rainParticles.targetNode = scene
+        rainParticles.particlePositionRange = CGVector(dx: frame.size.width, dy: frame.size.height)
+        rainParticles.zPosition = -1
+        rainParticles.physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
+        rainParticles.physicsBody?.affectedByGravity = true
+        
+        addChild(rainParticles)
+        
+        increaseDifficulty()
+
         physicsWorld.contactDelegate = self
     }
     
@@ -48,18 +66,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         guard let firstNode = firstBody.node else { return }
         guard let secondNode = secondBody.node else { return }
         
-        if firstNode.name == "banana" && secondNode.name == "building" {
+        if firstNode.name == "banana", secondNode.name == "building" {
             bananaHit(building: secondNode, atPoint: contact.contactPoint)
         }
         
-        if firstNode.name == "banana" && secondNode.name == "player1" {
+        if firstNode.name == "banana", secondNode.name == "player1" {
             destroy(player: player1)
         }
         
-        if firstNode.name == "banana" && secondNode.name == "player2" {
+        if firstNode.name == "banana", secondNode.name == "player2" {
             destroy(player: player2)
         }
-
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -229,5 +246,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             currentPlayer = 1
         }
         viewController?.activatePlayer(number: currentPlayer)
+        
+        increaseDifficulty()
+    }
+    
+    func increaseDifficulty() {
+        if viewController?.wind.direction != nil {
+            windDirection = Int.random(in: -1...4)
+            windSpeed += 0.5
+        }
+        
+        DispatchQueue.main.async {
+            self.viewController?.wind.direction = self.windDirection
+            self.viewController?.wind.speed = self.windSpeed
+        }
+        physicsWorld.gravity = CGVector(dx: windDirection, dy: -8)
+        physicsWorld.speed = windSpeed
+        
+        rainParticles.xAcceleration = physicsWorld.gravity.dx * 20
+        rainParticles.yAcceleration = physicsWorld.gravity.dy * 5
     }
 }
