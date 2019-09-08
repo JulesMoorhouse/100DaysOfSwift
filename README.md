@@ -246,3 +246,7 @@
 - Folder: P29 ExplodingMonkeys
 - Folder: P29X ExplodingMonkeys (based on P29 ExplodingMonkeys)
 - Challenge to add wind and auto layout, scores and wind with increased difficulty (gravity / speed)
+
+**Day 97 / 98**
+- Topics: Time Profiler and Allocations instruments, how to draw shadows in both Core Graphics and CALayer, re-using table view cells in code, and more.
+- Folder: P30 XcodeInstruments
