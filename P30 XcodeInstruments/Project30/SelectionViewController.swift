@@ -20,7 +20,10 @@ class SelectionViewController: UITableViewController {
 
 		tableView.rowHeight = 90
 		tableView.separatorStyle = .none
-
+        
+        // Always get back a dequeued cell
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
 		// load all the JPEGs into our array
 		let fm = FileManager.default
 
@@ -56,7 +59,9 @@ class SelectionViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")
+        
+        // This does mean you can't use different types of cell when you're using the newer register approach
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
 		// find the image for this cell, and load its thumbnail
 		let currentImage = items[indexPath.row % items.count]
