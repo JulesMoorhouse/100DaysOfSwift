@@ -250,3 +250,6 @@
 **Day 97 / 98**
 - Topics: Time Profiler and Allocations instruments, how to draw shadows in both Core Graphics and CALayer, re-using table view cells in code, and more.
 - Folder: P30 XcodeInstruments
+- Folder: P30X XcodeInstruments (based on P30 XcodeInstruments) - remove all force unwraps
+- Folder: P30X2 XcodeInstruments (based on P30X XcodeInstruments) - do all images processing at the start
+
