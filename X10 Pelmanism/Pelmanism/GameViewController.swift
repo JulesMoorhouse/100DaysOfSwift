@@ -10,6 +10,11 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
+
+protocol CanReceiveTransitionEvents {
+    func viewWillTransition(to size: CGSize)
+}
+
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -46,5 +51,15 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+        override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+
+        super.viewWillTransition(to: size, with: coordinator)
+
+        guard let skView = self.view as? SKView,
+            let canReceiveRotationEvents = skView.scene as? CanReceiveTransitionEvents else { return }
+
+        canReceiveRotationEvents.viewWillTransition(to: size)
     }
 }

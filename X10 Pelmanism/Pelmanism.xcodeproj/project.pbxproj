@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		880C3A8923354EE600880834 /* MessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880C3A8823354EE600880834 /* MessageNode.swift */; };
 		8894FF7323283BBA001EC3B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8894FF7223283BBA001EC3B8 /* AppDelegate.swift */; };
 		8894FF7523283BBA001EC3B8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8894FF7423283BBA001EC3B8 /* GameScene.sks */; };
 		8894FF7923283BBA001EC3B8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8894FF7823283BBA001EC3B8 /* GameScene.swift */; };
@@ -14,9 +15,11 @@
 		8894FF7E23283BBA001EC3B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8894FF7C23283BBA001EC3B8 /* Main.storyboard */; };
 		8894FF8023283BBC001EC3B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8894FF7F23283BBC001EC3B8 /* Assets.xcassets */; };
 		8894FF8323283BBC001EC3B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8894FF8123283BBC001EC3B8 /* LaunchScreen.storyboard */; };
+		8894FF8D23283D23001EC3B8 /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8894FF8C23283D23001EC3B8 /* PlayingCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		880C3A8823354EE600880834 /* MessageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNode.swift; sourceTree = "<group>"; };
 		8894FF6F23283BBA001EC3B8 /* Pelmanism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pelmanism.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8894FF7223283BBA001EC3B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8894FF7423283BBA001EC3B8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		8894FF7F23283BBC001EC3B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8894FF8223283BBC001EC3B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8894FF8423283BBC001EC3B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8894FF8C23283D23001EC3B8 /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +65,13 @@
 				8894FF7223283BBA001EC3B8 /* AppDelegate.swift */,
 				8894FF7423283BBA001EC3B8 /* GameScene.sks */,
 				8894FF7823283BBA001EC3B8 /* GameScene.swift */,
+				8894FF8C23283D23001EC3B8 /* PlayingCard.swift */,
 				8894FF7A23283BBA001EC3B8 /* GameViewController.swift */,
 				8894FF7C23283BBA001EC3B8 /* Main.storyboard */,
 				8894FF7F23283BBC001EC3B8 /* Assets.xcassets */,
 				8894FF8123283BBC001EC3B8 /* LaunchScreen.storyboard */,
 				8894FF8423283BBC001EC3B8 /* Info.plist */,
+				880C3A8823354EE600880834 /* MessageNode.swift */,
 			);
 			path = Pelmanism;
 			sourceTree = "<group>";
@@ -143,7 +149,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8894FF7923283BBA001EC3B8 /* GameScene.swift in Sources */,
+				880C3A8923354EE600880834 /* MessageNode.swift in Sources */,
 				8894FF7B23283BBA001EC3B8 /* GameViewController.swift in Sources */,
+				8894FF8D23283D23001EC3B8 /* PlayingCard.swift in Sources */,
 				8894FF7323283BBA001EC3B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -291,6 +299,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M3R45325T7;
 				INFOPLIST_FILE = Pelmanism/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +307,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mclapps.Pelmanism;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -309,6 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M3R45325T7;
 				INFOPLIST_FILE = Pelmanism/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mclapps.Pelmanism;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
