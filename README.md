@@ -229,6 +229,7 @@
 
 **Day 90**
 - Milestone project challenge 25 to 27
+- Folder: X09 MemeGenerator
 
 **Day 91**
 - Topics: Core Graphics Redux
@@ -253,3 +254,6 @@
 - Folder: P30X XcodeInstruments (based on P30 XcodeInstruments) - remove all force unwraps
 - Folder: P30X2 XcodeInstruments (based on P30X XcodeInstruments) - do all images processing at the start
 
+**Day 99**
+- Milestone project challenge 28 to 30
+- Folder: X10 Pelmanism
