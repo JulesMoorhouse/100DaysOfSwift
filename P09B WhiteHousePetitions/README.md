@@ -1,9 +1,9 @@
-# Day 40
+# Day 39
 
-- Folder: [P09X StormViewer](https://github.com/JulesMoorhouse/100DaysOfSwift/tree/master/P09X%20StormViewer/StormViewer) (based on P01X StormViewer aka Project 1)
+- DispatchQueue.global - async, DispatchQueue.main.async
 
-- Folder: [P09X SwiftyWords](https://github.com/JulesMoorhouse/100DaysOfSwift/tree/master/P09X%20SwiftyWords/SwiftyWords) (based on P08X SwiftyWords aka Project 8)
+- Folder: [P09B WhiteHousePetitions](https://github.com/JulesMoorhouse/100DaysOfSwift/tree/master/P09B%20WhiteHousePetitions/P07%20WhiteHousePetitions) (based on P07X WhiteHousePetitions aka Project 7) - PerformSelector
 
-- Folder: [P09X WhiteHousePetitions](https://github.com/JulesMoorhouse/100DaysOfSwift/tree/master/P09X%20WhiteHousePetitions/P07%20WhiteHousePetitions) (based on P0X WhiteHousePetitions)
+- Topics: Grand Central Dispatch, quality of service queues, performSelector() and more.
 
-- Challenge GCD changes to several projects.
+- An important video on GCD https://www.hackingwithswift.com/read/9/3/gcd-101-async
