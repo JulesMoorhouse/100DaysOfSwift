@@ -1,4 +1,4 @@
-# Day 60 / 61
+# Day 60 / 61 | [HWS 60](https://www.hackingwithswift.com/100/60) | [Index](https://github.com/JulesMoorhouse/100DaysOfSwift/blob/master/README.md)
 
 - Topics: MKMapView, MKAnnotation, MKPinAnnotationView, CLLocationCoordinate2D, and more.
 

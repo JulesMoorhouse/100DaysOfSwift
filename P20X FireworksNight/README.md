@@ -1,4 +1,4 @@
-# Day 70 / 71
+# Day 70 / 71 | [HWS 70](https://www.hackingwithswift.com/100/70) | [Index](https://github.com/JulesMoorhouse/100DaysOfSwift/blob/master/README.md)
 
 - Topics: UIBezierPath, SKAction.follow(), for case let, and more.
 

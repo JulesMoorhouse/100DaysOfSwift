@@ -1,4 +1,4 @@
-# Day 67 / 68 / 69
+# Day 67 / 68 / 69 | [HWS 67](https://www.hackingwithswift.com/100/67) | [Index](https://github.com/JulesMoorhouse/100DaysOfSwift/blob/master/README.md)
 
 - Topics: NSExtensionItem - creating a safari extension which runs JavaScript on a web page.
 

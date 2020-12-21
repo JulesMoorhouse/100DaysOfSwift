@@ -1,4 +1,4 @@
-# Day 19 / 20
+# Day 19 / 20 | [HWS 19](https://www.hackingwithswift.com/100/19) | [Index](https://github.com/JulesMoorhouse/100DaysOfSwift/blob/master/README.md)
 
 - Folder: [P02 GuessTheFlag](https://github.com/JulesMoorhouse/100DaysOfSwift/tree/master/P02%20GuessTheFlag/GuessTheFlag)
  

@@ -1,4 +1,4 @@
-# Day 83 / 84
+# Day 83 / 84 | [HWS 83](https://www.hackingwithswift.com/100/83) | [Index](https://github.com/JulesMoorhouse/100DaysOfSwift/blob/master/README.md)
 
 - Topics: Peer to peer networking, while also getting some practice with collection views, GCD, and more.
 

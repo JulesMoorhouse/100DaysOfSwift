@@ -1,4 +1,4 @@
-# Day 94 / 95 / 96
+# Day 94 / 95 / 96 | [HWS 94](https://www.hackingwithswift.com/100/94) | [Index](https://github.com/JulesMoorhouse/100DaysOfSwift/blob/master/README.md)
 
 - Topics: How to generate a scene dynamically, how to connect SpriteKit and UIKit, and more.
 

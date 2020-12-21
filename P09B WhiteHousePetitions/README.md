@@ -1,4 +1,4 @@
-# Day 39
+# Day 39 | [HWS 39](https://www.hackingwithswift.com/100/39) | [Index](https://github.com/JulesMoorhouse/100DaysOfSwift/blob/master/README.md)
 
 - DispatchQueue.global - async, DispatchQueue.main.async
 

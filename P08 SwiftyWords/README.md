@@ -1,4 +1,4 @@
-# Day 36 / 37 / 38
+# Day 36 / 37 / 38 | [HWS 36](https://www.hackingwithswift.com/100/36) | [Index](https://github.com/JulesMoorhouse/100DaysOfSwift/blob/master/README.md)
 
 - Folder: [P08 SwiftyWords](https://github.com/JulesMoorhouse/100DaysOfSwift/tree/master/P08%20SwiftyWords/SwiftyWords)
 

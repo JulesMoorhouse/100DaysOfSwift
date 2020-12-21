@@ -1,4 +1,4 @@
-# Day 45 / 46 / 47
+# Day 45 / 46 / 47 | [HWS 45](https://www.hackingwithswift.com/100/45) | [Index](https://github.com/JulesMoorhouse/100DaysOfSwift/blob/master/README.md)
 
 - Folder: [P11 Pachinko](https://github.com/JulesMoorhouse/100DaysOfSwift/tree/master/P11%20Pachinko/Pachinko)
 

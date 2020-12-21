@@ -1,4 +1,4 @@
-# Day 50
+# Day 50 | [HWS 50](https://www.hackingwithswift.com/100/50) | [Index](https://github.com/JulesMoorhouse/100DaysOfSwift/blob/master/README.md)
 
 - Folder: [X04 CameraCaptions](https://github.com/JulesMoorhouse/100DaysOfSwift/tree/master/X04%20CameraCaptions/CameraCaptions)
 
