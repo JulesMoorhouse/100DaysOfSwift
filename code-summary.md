@@ -2,6 +2,9 @@
 
 This is a list with comments about what each swift file contains. More interesting code will be highlighted. This file is work in progress.
 
+(You will require a chrome or edge extension to open links in a new tab https://chrome.google.com/webstore/detail/open-link-in-new-tab/lahhghmllilhdphkncabilobmcokgfag/related?hl=en-GB )
+
+
 <a href="./P01%20StormViewer/StormViewer/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P01 StormViewer/StormViewer/AppDelegate.swift</a><br/>
 <a href="./P01%20StormViewer/StormViewer/DetailViewController.swift" target="_blank" rel="noopener noreferrer">P01 StormViewer/StormViewer/DetailViewController.swift</a><br/>
 <a href="./P01%20StormViewer/StormViewer/ViewController.swift" target="_blank" rel="noopener noreferrer">P01 StormViewer/StormViewer/ViewController.swift</a><br/>
