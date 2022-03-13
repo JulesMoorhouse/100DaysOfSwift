@@ -5,43 +5,34 @@ This is a list with comments about what each swift file contains. More interesti
 (You will require a chrome or edge extension to open links in a new tab https://chrome.google.com/webstore/detail/open-link-in-new-tab/lahhghmllilhdphkncabilobmcokgfag/related?hl=en-GB )
 
 
-<a href="./P01%20StormViewer/StormViewer/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P01 StormViewer/StormViewer/AppDelegate.swift</a><br/>
 <a href="./P01%20StormViewer/StormViewer/DetailViewController.swift" target="_blank" rel="noopener noreferrer">P01 StormViewer/StormViewer/DetailViewController.swift</a><br/>
 <a href="./P01%20StormViewer/StormViewer/ViewController.swift" target="_blank" rel="noopener noreferrer">P01 StormViewer/StormViewer/ViewController.swift</a><br/>
 
 ---
-<a href="./P01X%20StormViewer/StormViewer/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P01X StormViewer/StormViewer/AppDelegate.swift</a><br/>
 <a href="./P01X%20StormViewer/StormViewer/DetailViewController.swift" target="_blank" rel="noopener noreferrer">P01X StormViewer/StormViewer/DetailViewController.swift</a><br/>
 <a href="./P01X%20StormViewer/StormViewer/ViewController.swift" target="_blank" rel="noopener noreferrer">P01X StormViewer/StormViewer/ViewController.swift</a><br/>
 
 ---
-<a href="./P02%20GuessTheFlag/GuessTheFlag/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P02 GuessTheFlag/GuessTheFlag/AppDelegate.swift</a><br/>
 <a href="./P02%20GuessTheFlag/GuessTheFlag/ViewController.swift" target="_blank" rel="noopener noreferrer">P02 GuessTheFlag/GuessTheFlag/ViewController.swift</a><br/>
 
 ---
-<a href="./P02X%20GuessTheFlag/GuessTheFlag/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P02X GuessTheFlag/GuessTheFlag/AppDelegate.swift</a><br/>
 <a href="./P02X%20GuessTheFlag/GuessTheFlag/ViewController.swift" target="_blank" rel="noopener noreferrer">P02X GuessTheFlag/GuessTheFlag/ViewController.swift</a><br/>
 
 ---
-<a href="./P03%20StormViewerActivity/StormViewer/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P03 StormViewerActivity/StormViewer/AppDelegate.swift</a><br/>
 <a href="./P03%20StormViewerActivity/StormViewer/DetailViewController.swift" target="_blank" rel="noopener noreferrer">P03 StormViewerActivity/StormViewer/DetailViewController.swift</a><br/>
 <a href="./P03%20StormViewerActivity/StormViewer/ViewController.swift" target="_blank" rel="noopener noreferrer">P03 StormViewerActivity/StormViewer/ViewController.swift</a><br/>
 
 ---
-<a href="./P04%20SimpleBrowser/SimpleBrowser/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P04 SimpleBrowser/SimpleBrowser/AppDelegate.swift</a><br/>
 <a href="./P04%20SimpleBrowser/SimpleBrowser/ViewController.swift" target="_blank" rel="noopener noreferrer">P04 SimpleBrowser/SimpleBrowser/ViewController.swift</a><br/>
 
 ---
-<a href="./P04X%20SimpleBrowser/SimpleBrowser/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P04X SimpleBrowser/SimpleBrowser/AppDelegate.swift</a><br/>
 <a href="./P04X%20SimpleBrowser/SimpleBrowser/ListViewController.swift" target="_blank" rel="noopener noreferrer">P04X SimpleBrowser/SimpleBrowser/ListViewController.swift</a><br/>
 <a href="./P04X%20SimpleBrowser/SimpleBrowser/ViewController.swift" target="_blank" rel="noopener noreferrer">P04X SimpleBrowser/SimpleBrowser/ViewController.swift</a><br/>
 
 ---
-<a href="./P05%20WordScrable/WordScrable/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P05 WordScrable/WordScrable/AppDelegate.swift</a><br/>
 <a href="./P05%20WordScrable/WordScrable/ViewController.swift" target="_blank" rel="noopener noreferrer">P05 WordScrable/WordScrable/ViewController.swift</a><br/>
 
 ---
-<a href="./P05X%20WordScrable/WordScrable/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P05X WordScrable/WordScrable/AppDelegate.swift</a><br/>
 <a href="./P05X%20WordScrable/WordScrable/ViewController.swift" target="_blank" rel="noopener noreferrer">P05X WordScrable/WordScrable/ViewController.swift</a><br/>
 
 ---
@@ -49,7 +40,6 @@ This is a list with comments about what each swift file contains. More interesti
 <a href="./P06A%20GuessTheFlag/GuessTheFlag/ViewController.swift" target="_blank" rel="noopener noreferrer">P06A GuessTheFlag/GuessTheFlag/ViewController.swift</a><br/>
 
 ---
-<a href="./P06B%20AutoLayout/P06B%20AutoLayout/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P06B AutoLayout/P06B AutoLayout/AppDelegate.swift</a><br/>
 <a href="./P06B%20AutoLayout/P06B%20AutoLayout/ViewController.swift" target="_blank" rel="noopener noreferrer">P06B AutoLayout/P06B AutoLayout/ViewController.swift</a><br/>
 
 ---
