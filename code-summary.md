@@ -36,14 +36,12 @@ This is a list with comments about what each swift file contains. More interesti
 <a href="./P05X%20WordScrable/WordScrable/ViewController.swift" target="_blank" rel="noopener noreferrer">P05X WordScrable/WordScrable/ViewController.swift</a><br/>
 
 ---
-<a href="./P06A%20GuessTheFlag/GuessTheFlag/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P06A GuessTheFlag/GuessTheFlag/AppDelegate.swift</a><br/>
 <a href="./P06A%20GuessTheFlag/GuessTheFlag/ViewController.swift" target="_blank" rel="noopener noreferrer">P06A GuessTheFlag/GuessTheFlag/ViewController.swift</a><br/>
 
 ---
 <a href="./P06B%20AutoLayout/P06B%20AutoLayout/ViewController.swift" target="_blank" rel="noopener noreferrer">P06B AutoLayout/P06B AutoLayout/ViewController.swift</a><br/>
 
 ---
-<a href="./P06X%20AutoLayoutAnchors/P06B%20AutoLayout/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P06X AutoLayoutAnchors/P06B AutoLayout/AppDelegate.swift</a><br/>
 <a href="./P06X%20AutoLayoutAnchors/P06B%20AutoLayout/ViewController.swift" target="_blank" rel="noopener noreferrer">P06X AutoLayoutAnchors/P06B AutoLayout/ViewController.swift</a><br/>
 
 ---
@@ -61,11 +59,9 @@ This is a list with comments about what each swift file contains. More interesti
 <a href="./P07X%20WhiteHousePetitions/P07%20WhiteHousePetitions/ViewController.swift" target="_blank" rel="noopener noreferrer">P07X WhiteHousePetitions/P07 WhiteHousePetitions/ViewController.swift</a><br/>
 
 ---
-<a href="./P08%20SwiftyWords/SwiftyWords/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P08 SwiftyWords/SwiftyWords/AppDelegate.swift</a><br/>
 <a href="./P08%20SwiftyWords/SwiftyWords/ViewController.swift" target="_blank" rel="noopener noreferrer">P08 SwiftyWords/SwiftyWords/ViewController.swift</a><br/>
 
 ---
-<a href="./P08X%20SwiftyWords/SwiftyWords/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P08X SwiftyWords/SwiftyWords/AppDelegate.swift</a><br/>
 <a href="./P08X%20SwiftyWords/SwiftyWords/ViewController.swift" target="_blank" rel="noopener noreferrer">P08X SwiftyWords/SwiftyWords/ViewController.swift</a><br/>
 
 ---
@@ -83,7 +79,6 @@ This is a list with comments about what each swift file contains. More interesti
 <a href="./P09B%20WhiteHousePetitions/P07%20WhiteHousePetitions/ViewController.swift" target="_blank" rel="noopener noreferrer">P09B WhiteHousePetitions/P07 WhiteHousePetitions/ViewController.swift</a><br/>
 
 ---
-<a href="./P09X%20StormViewer/StormViewer/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P09X StormViewer/StormViewer/AppDelegate.swift</a><br/>
 <a href="./P09X%20StormViewer/StormViewer/DetailViewController.swift" target="_blank" rel="noopener noreferrer">P09X StormViewer/StormViewer/DetailViewController.swift</a><br/>
 <a href="./P09X%20StormViewer/StormViewer/ViewController.swift" target="_blank" rel="noopener noreferrer">P09X StormViewer/StormViewer/ViewController.swift</a><br/>
 <a href="./P09X%20SwiftyWords/SwiftyWords/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P09X SwiftyWords/SwiftyWords/AppDelegate.swift</a><br/>
@@ -95,134 +90,116 @@ This is a list with comments about what each swift file contains. More interesti
 <a href="./P09X%20WhiteHousePetitions/P07%20WhiteHousePetitions/ViewController.swift" target="_blank" rel="noopener noreferrer">P09X WhiteHousePetitions/P07 WhiteHousePetitions/ViewController.swift</a><br/>
 
 ---
-<a href="./P10%20NamesToFaces/NamesToFaces/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P10 NamesToFaces/NamesToFaces/AppDelegate.swift</a><br/>
 <a href="./P10%20NamesToFaces/NamesToFaces/Person.swift" target="_blank" rel="noopener noreferrer">P10 NamesToFaces/NamesToFaces/Person.swift</a><br/>
 <a href="./P10%20NamesToFaces/NamesToFaces/PersonCell.swift" target="_blank" rel="noopener noreferrer">P10 NamesToFaces/NamesToFaces/PersonCell.swift</a><br/>
 <a href="./P10%20NamesToFaces/NamesToFaces/ViewController.swift" target="_blank" rel="noopener noreferrer">P10 NamesToFaces/NamesToFaces/ViewController.swift</a><br/>
 
 ---
-<a href="./P10X%20NamesToFaces/NamesToFaces/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P10X NamesToFaces/NamesToFaces/AppDelegate.swift</a><br/>
 <a href="./P10X%20NamesToFaces/NamesToFaces/Person.swift" target="_blank" rel="noopener noreferrer">P10X NamesToFaces/NamesToFaces/Person.swift</a><br/>
 <a href="./P10X%20NamesToFaces/NamesToFaces/PersonCell.swift" target="_blank" rel="noopener noreferrer">P10X NamesToFaces/NamesToFaces/PersonCell.swift</a><br/>
 <a href="./P10X%20NamesToFaces/NamesToFaces/ViewController.swift" target="_blank" rel="noopener noreferrer">P10X NamesToFaces/NamesToFaces/ViewController.swift</a><br/>
-<a href="./P10X%20StormViewer/StormViewer/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P10X StormViewer/StormViewer/AppDelegate.swift</a><br/>
+
+---
 <a href="./P10X%20StormViewer/StormViewer/DetailViewController.swift" target="_blank" rel="noopener noreferrer">P10X StormViewer/StormViewer/DetailViewController.swift</a><br/>
 <a href="./P10X%20StormViewer/StormViewer/Storm.swift" target="_blank" rel="noopener noreferrer">P10X StormViewer/StormViewer/Storm.swift</a><br/>
 <a href="./P10X%20StormViewer/StormViewer/StormCell.swift" target="_blank" rel="noopener noreferrer">P10X StormViewer/StormViewer/StormCell.swift</a><br/>
 <a href="./P10X%20StormViewer/StormViewer/ViewController.swift" target="_blank" rel="noopener noreferrer">P10X StormViewer/StormViewer/ViewController.swift</a><br/>
 
 ---
-<a href="./P11%20Pachinko/Pachinko/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P11 Pachinko/Pachinko/AppDelegate.swift</a><br/>
 <a href="./P11%20Pachinko/Pachinko/GameScene.swift" target="_blank" rel="noopener noreferrer">P11 Pachinko/Pachinko/GameScene.swift</a><br/>
 <a href="./P11%20Pachinko/Pachinko/GameViewController.swift" target="_blank" rel="noopener noreferrer">P11 Pachinko/Pachinko/GameViewController.swift</a><br/>
 
 ---
-<a href="./P11X%20Pachinko/Pachinko/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P11X Pachinko/Pachinko/AppDelegate.swift</a><br/>
 <a href="./P11X%20Pachinko/Pachinko/GameScene.swift" target="_blank" rel="noopener noreferrer">P11X Pachinko/Pachinko/GameScene.swift</a><br/>
 <a href="./P11X%20Pachinko/Pachinko/GameViewController.swift" target="_blank" rel="noopener noreferrer">P11X Pachinko/Pachinko/GameViewController.swift</a><br/>
 
 ---
-<a href="./P12%20UserDefaults/UserDefaults/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P12 UserDefaults/UserDefaults/AppDelegate.swift</a><br/>
 <a href="./P12%20UserDefaults/UserDefaults/ViewController.swift" target="_blank" rel="noopener noreferrer">P12 UserDefaults/UserDefaults/ViewController.swift</a><br/>
 
 ---
-<a href="./P12A%20NamesToFaces%20NSCoding/NamesToFaces/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P12A NamesToFaces NSCoding/NamesToFaces/AppDelegate.swift</a><br/>
 <a href="./P12A%20NamesToFaces%20NSCoding/NamesToFaces/Person.swift" target="_blank" rel="noopener noreferrer">P12A NamesToFaces NSCoding/NamesToFaces/Person.swift</a><br/>
 <a href="./P12A%20NamesToFaces%20NSCoding/NamesToFaces/PersonCell.swift" target="_blank" rel="noopener noreferrer">P12A NamesToFaces NSCoding/NamesToFaces/PersonCell.swift</a><br/>
 <a href="./P12A%20NamesToFaces%20NSCoding/NamesToFaces/ViewController.swift" target="_blank" rel="noopener noreferrer">P12A NamesToFaces NSCoding/NamesToFaces/ViewController.swift</a><br/>
 
 ---
-<a href="./P12B%20NamesToFaces%20Codable/NamesToFaces/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P12B NamesToFaces Codable/NamesToFaces/AppDelegate.swift</a><br/>
 <a href="./P12B%20NamesToFaces%20Codable/NamesToFaces/Person.swift" target="_blank" rel="noopener noreferrer">P12B NamesToFaces Codable/NamesToFaces/Person.swift</a><br/>
 <a href="./P12B%20NamesToFaces%20Codable/NamesToFaces/PersonCell.swift" target="_blank" rel="noopener noreferrer">P12B NamesToFaces Codable/NamesToFaces/PersonCell.swift</a><br/>
 <a href="./P12B%20NamesToFaces%20Codable/NamesToFaces/ViewController.swift" target="_blank" rel="noopener noreferrer">P12B NamesToFaces Codable/NamesToFaces/ViewController.swift</a><br/>
 
 ---
-<a href="./P12X%20GuessTheFlag/GuessTheFlag/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P12X GuessTheFlag/GuessTheFlag/AppDelegate.swift</a><br/>
 <a href="./P12X%20GuessTheFlag/GuessTheFlag/ViewController.swift" target="_blank" rel="noopener noreferrer">P12X GuessTheFlag/GuessTheFlag/ViewController.swift</a><br/>
-<a href="./P12X%20StormViewer/StormViewer/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P12X StormViewer/StormViewer/AppDelegate.swift</a><br/>
+
+---
 <a href="./P12X%20StormViewer/StormViewer/DetailViewController.swift" target="_blank" rel="noopener noreferrer">P12X StormViewer/StormViewer/DetailViewController.swift</a><br/>
 <a href="./P12X%20StormViewer/StormViewer/Storm.swift" target="_blank" rel="noopener noreferrer">P12X StormViewer/StormViewer/Storm.swift</a><br/>
 <a href="./P12X%20StormViewer/StormViewer/ViewController.swift" target="_blank" rel="noopener noreferrer">P12X StormViewer/StormViewer/ViewController.swift</a><br/>
-<a href="./P12X%20WordScrable/WordScrable/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P12X WordScrable/WordScrable/AppDelegate.swift</a><br/>
+
+---
 <a href="./P12X%20WordScrable/WordScrable/ViewController.swift" target="_blank" rel="noopener noreferrer">P12X WordScrable/WordScrable/ViewController.swift</a><br/>
 
 ---
-<a href="./P13%20InstaFilter/InstaFilter/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P13 InstaFilter/InstaFilter/AppDelegate.swift</a><br/>
 <a href="./P13%20InstaFilter/InstaFilter/ViewController.swift" target="_blank" rel="noopener noreferrer">P13 InstaFilter/InstaFilter/ViewController.swift</a><br/>
 
 ---
-<a href="./P13X%20InstaFilter/InstaFilter/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P13X InstaFilter/InstaFilter/AppDelegate.swift</a><br/>
 <a href="./P13X%20InstaFilter/InstaFilter/ViewController.swift" target="_blank" rel="noopener noreferrer">P13X InstaFilter/InstaFilter/ViewController.swift</a><br/>
 
 ---
-<a href="./P14%20WhackAPenguin/WhackAPenguin/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P14 WhackAPenguin/WhackAPenguin/AppDelegate.swift</a><br/>
 <a href="./P14%20WhackAPenguin/WhackAPenguin/GameScene.swift" target="_blank" rel="noopener noreferrer">P14 WhackAPenguin/WhackAPenguin/GameScene.swift</a><br/>
 <a href="./P14%20WhackAPenguin/WhackAPenguin/GameViewController.swift" target="_blank" rel="noopener noreferrer">P14 WhackAPenguin/WhackAPenguin/GameViewController.swift</a><br/>
 <a href="./P14%20WhackAPenguin/WhackAPenguin/WhackSlot.swift" target="_blank" rel="noopener noreferrer">P14 WhackAPenguin/WhackAPenguin/WhackSlot.swift</a><br/>
 
 ---
-<a href="./P14X%20WhackAPenguin/WhackAPenguin/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P14X WhackAPenguin/WhackAPenguin/AppDelegate.swift</a><br/>
 <a href="./P14X%20WhackAPenguin/WhackAPenguin/GameScene.swift" target="_blank" rel="noopener noreferrer">P14X WhackAPenguin/WhackAPenguin/GameScene.swift</a><br/>
 <a href="./P14X%20WhackAPenguin/WhackAPenguin/GameViewController.swift" target="_blank" rel="noopener noreferrer">P14X WhackAPenguin/WhackAPenguin/GameViewController.swift</a><br/>
 <a href="./P14X%20WhackAPenguin/WhackAPenguin/WhackSlot.swift" target="_blank" rel="noopener noreferrer">P14X WhackAPenguin/WhackAPenguin/WhackSlot.swift</a><br/>
 
 ---
-<a href="./P15%20Animation/Animation/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P15 Animation/Animation/AppDelegate.swift</a><br/>
 <a href="./P15%20Animation/Animation/ViewController.swift" target="_blank" rel="noopener noreferrer">P15 Animation/Animation/ViewController.swift</a><br/>
 
 ---
-<a href="./P15X%20GuessTheFlag/GuessTheFlag/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P15X GuessTheFlag/GuessTheFlag/AppDelegate.swift</a><br/>
 <a href="./P15X%20GuessTheFlag/GuessTheFlag/ViewController.swift" target="_blank" rel="noopener noreferrer">P15X GuessTheFlag/GuessTheFlag/ViewController.swift</a><br/>
-<a href="./P15X%20InstaFilter/InstaFilter/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P15X InstaFilter/InstaFilter/AppDelegate.swift</a><br/>
+
+---
 <a href="./P15X%20InstaFilter/InstaFilter/ViewController.swift" target="_blank" rel="noopener noreferrer">P15X InstaFilter/InstaFilter/ViewController.swift</a><br/>
-<a href="./P15X%20SwiftyWords/SwiftyWords/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P15X SwiftyWords/SwiftyWords/AppDelegate.swift</a><br/>
+
+---
 <a href="./P15X%20SwiftyWords/SwiftyWords/ViewController.swift" target="_blank" rel="noopener noreferrer">P15X SwiftyWords/SwiftyWords/ViewController.swift</a><br/>
 
 ---
-<a href="./P16%20CapitalCities/CapitalCities/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P16 CapitalCities/CapitalCities/AppDelegate.swift</a><br/>
 <a href="./P16%20CapitalCities/CapitalCities/Capital.swift" target="_blank" rel="noopener noreferrer">P16 CapitalCities/CapitalCities/Capital.swift</a><br/>
 <a href="./P16%20CapitalCities/CapitalCities/ViewController.swift" target="_blank" rel="noopener noreferrer">P16 CapitalCities/CapitalCities/ViewController.swift</a><br/>
 
 ---
-<a href="./P16X%20CapitalCities/CapitalCities/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P16X CapitalCities/CapitalCities/AppDelegate.swift</a><br/>
 <a href="./P16X%20CapitalCities/CapitalCities/Capital.swift" target="_blank" rel="noopener noreferrer">P16X CapitalCities/CapitalCities/Capital.swift</a><br/>
 <a href="./P16X%20CapitalCities/CapitalCities/DetailViewController.swift" target="_blank" rel="noopener noreferrer">P16X CapitalCities/CapitalCities/DetailViewController.swift</a><br/>
 <a href="./P16X%20CapitalCities/CapitalCities/ViewController.swift" target="_blank" rel="noopener noreferrer">P16X CapitalCities/CapitalCities/ViewController.swift</a><br/>
 
 ---
-<a href="./P17%20SpaceRace/SpaceRace/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P17 SpaceRace/SpaceRace/AppDelegate.swift</a><br/>
 <a href="./P17%20SpaceRace/SpaceRace/GameScene.swift" target="_blank" rel="noopener noreferrer">P17 SpaceRace/SpaceRace/GameScene.swift</a><br/>
 <a href="./P17%20SpaceRace/SpaceRace/GameViewController.swift" target="_blank" rel="noopener noreferrer">P17 SpaceRace/SpaceRace/GameViewController.swift</a><br/>
 
 ---
-<a href="./P17X%20SpaceRace/SpaceRace/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P17X SpaceRace/SpaceRace/AppDelegate.swift</a><br/>
 <a href="./P17X%20SpaceRace/SpaceRace/GameScene.swift" target="_blank" rel="noopener noreferrer">P17X SpaceRace/SpaceRace/GameScene.swift</a><br/>
 <a href="./P17X%20SpaceRace/SpaceRace/GameViewController.swift" target="_blank" rel="noopener noreferrer">P17X SpaceRace/SpaceRace/GameViewController.swift</a><br/>
 
 ---
-<a href="./P18%20Debugging/Debugging/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P18 Debugging/Debugging/AppDelegate.swift</a><br/>
 <a href="./P18%20Debugging/Debugging/ViewController.swift" target="_blank" rel="noopener noreferrer">P18 Debugging/Debugging/ViewController.swift</a><br/>
 
 ---
 <a href="./P19%20SafariJavascriptInjection/Extension/ActionViewController.swift" target="_blank" rel="noopener noreferrer">P19 SafariJavascriptInjection/Extension/ActionViewController.swift</a><br/>
-<a href="./P19%20SafariJavascriptInjection/SafariJavascriptInjection/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P19 SafariJavascriptInjection/SafariJavascriptInjection/AppDelegate.swift</a><br/>
 <a href="./P19%20SafariJavascriptInjection/SafariJavascriptInjection/ViewController.swift" target="_blank" rel="noopener noreferrer">P19 SafariJavascriptInjection/SafariJavascriptInjection/ViewController.swift</a><br/>
 
 ---
 <a href="./P19X%20SafariJavascriptInjection/Extension/ActionViewController.swift" target="_blank" rel="noopener noreferrer">P19X SafariJavascriptInjection/Extension/ActionViewController.swift</a><br/>
 <a href="./P19X%20SafariJavascriptInjection/Extension/ScriptsTableViewController.swift" target="_blank" rel="noopener noreferrer">P19X SafariJavascriptInjection/Extension/ScriptsTableViewController.swift</a><br/>
 <a href="./P19X%20SafariJavascriptInjection/Extension/SiteScript.swift" target="_blank" rel="noopener noreferrer">P19X SafariJavascriptInjection/Extension/SiteScript.swift</a><br/>
-<a href="./P19X%20SafariJavascriptInjection/SafariJavascriptInjection/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P19X SafariJavascriptInjection/SafariJavascriptInjection/AppDelegate.swift</a><br/>
 <a href="./P19X%20SafariJavascriptInjection/SafariJavascriptInjection/ViewController.swift" target="_blank" rel="noopener noreferrer">P19X SafariJavascriptInjection/SafariJavascriptInjection/ViewController.swift</a><br/>
 
 ---
-<a href="./P20%20FireworksNight/FireworksNight/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P20 FireworksNight/FireworksNight/AppDelegate.swift</a><br/>
 <a href="./P20%20FireworksNight/FireworksNight/GameScene.swift" target="_blank" rel="noopener noreferrer">P20 FireworksNight/FireworksNight/GameScene.swift</a><br/>
 <a href="./P20%20FireworksNight/FireworksNight/GameViewController.swift" target="_blank" rel="noopener noreferrer">P20 FireworksNight/FireworksNight/GameViewController.swift</a><br/>
 
 ---
-<a href="./P20X%20FireworksNight/FireworksNight/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P20X FireworksNight/FireworksNight/AppDelegate.swift</a><br/>
 <a href="./P20X%20FireworksNight/FireworksNight/GameScene.swift" target="_blank" rel="noopener noreferrer">P20X FireworksNight/FireworksNight/GameScene.swift</a><br/>
 <a href="./P20X%20FireworksNight/FireworksNight/GameViewController.swift" target="_blank" rel="noopener noreferrer">P20X FireworksNight/FireworksNight/GameViewController.swift</a><br/>
 
