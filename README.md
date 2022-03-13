@@ -6,6 +6,7 @@
 - PnnA - Project A
 - Xnn - Full challenge project
 
+[Summary of all code](code-summary.md)
 |||
 |-|-|
 |**Day 16 / 17** <br/>- Folder: [P01 StormViewer](https://github.com/JulesMoorhouse/100DaysOfSwift/tree/master/P01%20StormViewer) <br/> - Topics: view controllers, storyboards, FileManager class, UIImageView, UIImage, UINavigationBar and more. | <a href="./Images/day16-p01.gif"><img src="./Images/day16-p01.png" width=100></a> |
