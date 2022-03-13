@@ -204,28 +204,22 @@ This is a list with comments about what each swift file contains. More interesti
 <a href="./P20X%20FireworksNight/FireworksNight/GameViewController.swift" target="_blank" rel="noopener noreferrer">P20X FireworksNight/FireworksNight/GameViewController.swift</a><br/>
 
 ---
-<a href="./P21%20LocalNotifications/LocalNotifications/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P21 LocalNotifications/LocalNotifications/AppDelegate.swift</a><br/>
 <a href="./P21%20LocalNotifications/LocalNotifications/ViewController.swift" target="_blank" rel="noopener noreferrer">P21 LocalNotifications/LocalNotifications/ViewController.swift</a><br/>
 
 ---
-<a href="./P21X%20GuessTheFlag/GuessTheFlag/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P21X GuessTheFlag/GuessTheFlag/AppDelegate.swift</a><br/>
 <a href="./P21X%20GuessTheFlag/GuessTheFlag/ViewController.swift" target="_blank" rel="noopener noreferrer">P21X GuessTheFlag/GuessTheFlag/ViewController.swift</a><br/>
 
 ---
-<a href="./P22%20DetectABeacon/DetectABeacon/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P22 DetectABeacon/DetectABeacon/AppDelegate.swift</a><br/>
 <a href="./P22%20DetectABeacon/DetectABeacon/ViewController.swift" target="_blank" rel="noopener noreferrer">P22 DetectABeacon/DetectABeacon/ViewController.swift</a><br/>
 
 ---
-<a href="./P22X%20DetectABeacon/DetectABeacon/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P22X DetectABeacon/DetectABeacon/AppDelegate.swift</a><br/>
 <a href="./P22X%20DetectABeacon/DetectABeacon/ViewController.swift" target="_blank" rel="noopener noreferrer">P22X DetectABeacon/DetectABeacon/ViewController.swift</a><br/>
 
 ---
-<a href="./P23%20SwiftyNinja/SwiftyNinja/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P23 SwiftyNinja/SwiftyNinja/AppDelegate.swift</a><br/>
 <a href="./P23%20SwiftyNinja/SwiftyNinja/GameScene.swift" target="_blank" rel="noopener noreferrer">P23 SwiftyNinja/SwiftyNinja/GameScene.swift</a><br/>
 <a href="./P23%20SwiftyNinja/SwiftyNinja/GameViewController.swift" target="_blank" rel="noopener noreferrer">P23 SwiftyNinja/SwiftyNinja/GameViewController.swift</a><br/>
 
 ---
-<a href="./P23X%20SwiftyNinja/SwiftyNinja/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P23X SwiftyNinja/SwiftyNinja/AppDelegate.swift</a><br/>
 <a href="./P23X%20SwiftyNinja/SwiftyNinja/GameScene.swift" target="_blank" rel="noopener noreferrer">P23X SwiftyNinja/SwiftyNinja/GameScene.swift</a><br/>
 <a href="./P23X%20SwiftyNinja/SwiftyNinja/GameViewController.swift" target="_blank" rel="noopener noreferrer">P23X SwiftyNinja/SwiftyNinja/GameViewController.swift</a><br/>
 
@@ -234,20 +228,16 @@ This is a list with comments about what each swift file contains. More interesti
 <a href="./P24X%20SwiftStrings.playground/Contents.swift" target="_blank" rel="noopener noreferrer">P24X SwiftStrings.playground/Contents.swift</a><br/>
 
 ---
-<a href="./P25%20SelfieShare/SelfieShare/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P25 SelfieShare/SelfieShare/AppDelegate.swift</a><br/>
 <a href="./P25%20SelfieShare/SelfieShare/ViewController.swift" target="_blank" rel="noopener noreferrer">P25 SelfieShare/SelfieShare/ViewController.swift</a><br/>
 
 ---
-<a href="./P25X%20SelfieShare/SelfieShare/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P25X SelfieShare/SelfieShare/AppDelegate.swift</a><br/>
 <a href="./P25X%20SelfieShare/SelfieShare/ViewController.swift" target="_blank" rel="noopener noreferrer">P25X SelfieShare/SelfieShare/ViewController.swift</a><br/>
 
 ---
-<a href="./P26%20MarbleMaze/MarbleMaze/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P26 MarbleMaze/MarbleMaze/AppDelegate.swift</a><br/>
 <a href="./P26%20MarbleMaze/MarbleMaze/GameScene.swift" target="_blank" rel="noopener noreferrer">P26 MarbleMaze/MarbleMaze/GameScene.swift</a><br/>
 <a href="./P26%20MarbleMaze/MarbleMaze/GameViewController.swift" target="_blank" rel="noopener noreferrer">P26 MarbleMaze/MarbleMaze/GameViewController.swift</a><br/>
 
 ---
-<a href="./P26X%20MarbleMaze/MarbleMaze/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P26X MarbleMaze/MarbleMaze/AppDelegate.swift</a><br/>
 <a href="./P26X%20MarbleMaze/MarbleMaze/GameScene.swift" target="_blank" rel="noopener noreferrer">P26X MarbleMaze/MarbleMaze/GameScene.swift</a><br/>
 <a href="./P26X%20MarbleMaze/MarbleMaze/GameViewController.swift" target="_blank" rel="noopener noreferrer">P26X MarbleMaze/MarbleMaze/GameViewController.swift</a><br/>
 
@@ -256,15 +246,14 @@ This is a list with comments about what each swift file contains. More interesti
 <a href="./P27%20CoreGraphics/CoreGraphics/ViewController.swift" target="_blank" rel="noopener noreferrer">P27 CoreGraphics/CoreGraphics/ViewController.swift</a><br/>
 
 ---
-<a href="./P27X%20CoreGraphics/CoreGraphics/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P27X CoreGraphics/CoreGraphics/AppDelegate.swift</a><br/>
 <a href="./P27X%20CoreGraphics/CoreGraphics/ViewController.swift" target="_blank" rel="noopener noreferrer">P27X CoreGraphics/CoreGraphics/ViewController.swift</a><br/>
-<a href="./P27X%20StormViewer/StormViewer/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P27X StormViewer/StormViewer/AppDelegate.swift</a><br/>
+
+---
 <a href="./P27X%20StormViewer/StormViewer/DetailViewController.swift" target="_blank" rel="noopener noreferrer">P27X StormViewer/StormViewer/DetailViewController.swift</a><br/>
 <a href="./P27X%20StormViewer/StormViewer/Storm.swift" target="_blank" rel="noopener noreferrer">P27X StormViewer/StormViewer/Storm.swift</a><br/>
 <a href="./P27X%20StormViewer/StormViewer/ViewController.swift" target="_blank" rel="noopener noreferrer">P27X StormViewer/StormViewer/ViewController.swift</a><br/>
 
 ---
-<a href="./P28%20SecretSwift/SecretSwift/AppDelegate.swift" target="_blank" rel="noopener noreferrer">P28 SecretSwift/SecretSwift/AppDelegate.swift</a><br/>
 <a href="./P28%20SecretSwift/SecretSwift/KeychainItemAccessibility.swift" target="_blank" rel="noopener noreferrer">P28 SecretSwift/SecretSwift/KeychainItemAccessibility.swift</a><br/>
 <a href="./P28%20SecretSwift/SecretSwift/KeychainWrapper.swift" target="_blank" rel="noopener noreferrer">P28 SecretSwift/SecretSwift/KeychainWrapper.swift</a><br/>
 <a href="./P28%20SecretSwift/SecretSwift/ViewController.swift" target="_blank" rel="noopener noreferrer">P28 SecretSwift/SecretSwift/ViewController.swift</a><br/>
